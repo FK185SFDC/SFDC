@@ -1,4 +1,0 @@
-SFDC
-====
-
-Day Care Application
