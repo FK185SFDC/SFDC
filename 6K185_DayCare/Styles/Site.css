@@ -261,6 +261,7 @@ div.accountInfo
     text-align: right;
     padding: 10px;
     color: White;
+    margin-top: 0px;
 }
 
 .loginDisplay a:link

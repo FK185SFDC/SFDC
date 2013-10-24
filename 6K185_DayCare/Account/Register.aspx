@@ -1,9 +1,9 @@
-﻿<%@ Page Title="Register" Language="VB" MasterPageFile="~/Site.Master" AutoEventWireup="false"
+﻿<%@ Page Title="Register" Language="VB" MasterPageFile="~/MasterPage.Master" AutoEventWireup="false"
     CodeFile="Register.aspx.vb" Inherits="Account_Register" %>
 
-<asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
+<asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="Head">
 </asp:Content>
-<asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
+<asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="ContentPlaceHolder1">
     <asp:CreateUserWizard ID="RegisterUser" runat="server" EnableViewState="false">
         <LayoutTemplate>
             <asp:PlaceHolder ID="wizardStepPlaceholder" runat="server"></asp:PlaceHolder>
