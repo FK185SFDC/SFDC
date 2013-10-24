@@ -1,25 +1,25 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/group4.master" AutoEventWireup="false" CodeFile="checkOut.aspx.vb" Inherits="lib_checkOut" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/Site.master" AutoEventWireup="false" CodeFile="checkOut.aspx.vb" Inherits="lib_checkOut" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
-   Material ID:<asp:TextBox ID="mID_tb" runat="server"></asp:TextBox>
+   Material ID:<asp:TextBox ID="ChildID_tb" runat="server"></asp:TextBox>
 
    <br /><br />
 
    UserName:<asp:TextBox ID="UserName_tb" runat="server"></asp:TextBox>
 
    <br /><br />
-   <asp:RequiredFieldValidator ID="rfd_mIDRequired" runat="server" 
-                        ControlToValidate="mID_tb" ErrorMessage="Please enter the Material ID of the material being rented." 
+   <asp:RequiredFieldValidator ID="rfd_ChildIDRequired" runat="server" 
+                        ControlToValidate="ChildID_tb" ErrorMessage="Please enter the Child ID of the Kid leaving." 
                         ToolTip="Please enter the material ID of the material being rented.">
-                        <span class='rfd'>*** Please enter the Material ID of the material being rented.</span>
+                        <span class='rfd'>*** Please enter the Child ID of the Kid leaving..</span>
                </asp:RequiredFieldValidator>
     <br /> <br />
     <asp:RequiredFieldValidator ID="rfd_UserNameRequired" runat="server" 
-                           ControlToValidate="UserName_tb" ErrorMessage="Please enter the UserName of the person renting the material." 
-                           ToolTip="Please enter the UserName of the person renting the material.">
+                           ControlToValidate="UserName_tb" ErrorMessage="Please enter the UserName of the person checking out the Kid." 
+                           ToolTip="Please enter the UserName of the person checking out the Kid.">
                            <span class='rfd'>*** Please enter a UserName.</span>
                 </asp:RequiredFieldValidator>
 

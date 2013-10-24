@@ -3,18 +3,18 @@
 Partial Class lib_checkOut
     Inherits System.Web.UI.Page
     Protected Sub Page_Load(sender As Object, e As System.EventArgs) Handles Me.Load
-        mID_tb.Focus()
+        ChildID_tb.Focus()
 
     End Sub
 
     Protected Sub rentButton_Click(sender As Object, e As System.EventArgs) Handles rentButton.Click
 
-        Dim strMID As String = mID_tb.Text
+        Dim strMID As String = ChildID_tb.Text
         Dim strUserName As String = UserName_tb.Text
         Dim rentDate As DateTime = DateTime.Now
         Dim dateDueBack As DateTime = DateAdd("d", 30, Today)
 
-        Dim sqlconn As New SqlConnection(ConfigurationManager.ConnectionStrings("cs_SLPL").ConnectionString)
+        Dim sqlconn As New SqlConnection(ConfigurationManager.ConnectionStrings("fk185_ClassConnectionString").ConnectionString)
 
         Dim sqlAdp As New SqlDataAdapter
         Dim sqlCmd As New SqlCommand
@@ -28,7 +28,7 @@ Partial Class lib_checkOut
 
 
         sqlCmd.Parameters.Add(New SqlParameter("@UserName", strUserName))
-        sqlCmd.Parameters.Add(New SqlParameter("@mId", strMID))
+        sqlCmd.Parameters.Add(New SqlParameter("@ChildId", strChildID))
         sqlCmd.Parameters.Add(New SqlParameter("@RentDate", rentDate))
         sqlCmd.Parameters.Add(New SqlParameter("@DateDueBack", dateDueBack))
 
@@ -36,7 +36,7 @@ Partial Class lib_checkOut
         sqlCmd.ExecuteNonQuery()
         sqlconn.Close()
 
-        Response.Redirect("ViewAllRentals.aspx")
+        Response.Redirect("ViewAllKids.aspx")
 
     End Sub
 End Class
