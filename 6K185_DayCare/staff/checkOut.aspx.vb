@@ -20,9 +20,9 @@ Partial Class lib_checkOut
         Dim sqlCmd As New SqlCommand
 
         sqlCmd.Connection = sqlconn
-        sqlCmd.CommandText = "sp_aspnet_Users"
+        'sqlCmd.CommandText = "sp_aspnet_Users"
         sqlCmd.CommandType = Data.CommandType.StoredProcedure
-        sqlCmd.CommandText = "sp_rentals"
+        ' sqlCmd.CommandText = "sp_rentals"
         sqlCmd.CommandType = Data.CommandType.StoredProcedure
 
 
