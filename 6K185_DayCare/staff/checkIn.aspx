@@ -5,10 +5,10 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
 
-    Kid ID to be checked in:<asp:TextBox ID="returnTextBox" runat="server" ToolTip="enter material ID"></asp:TextBox>
+    Kid ID to be checked in:<asp:TextBox ID="returnTextBox" runat="server" ToolTip="Enter Kid's ID"></asp:TextBox>
 
      <br /><br />
-   <asp:RequiredFieldValidator ID="rfd_mIDRequired" runat="server" 
+   <asp:RequiredFieldValidator ID="rfd_Kid_IDRequired" runat="server" 
                         ControlToValidate="returnTextBox" ErrorMessage="Please enter the Child ID of the Kid arriving." 
                         ToolTip="Please enter the Child ID of the Kid arriving.">
                         <span class='rfd'>*** Please enter the Child ID of the Kid arriving..</span>

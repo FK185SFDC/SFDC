@@ -26,7 +26,7 @@
       
 
                <br /><br />
-    <asp:Button ID="rentButton" runat="server" Text="Check Out" />
+    <asp:Button ID="CheckOutButton" runat="server" Text="Check Out" />
 
 
 

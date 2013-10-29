@@ -7,9 +7,9 @@ Partial Class lib_checkOut
 
     End Sub
 
-    Protected Sub rentButton_Click(sender As Object, e As System.EventArgs) Handles rentButton.Click
+    Protected Sub CheckOutButton_Click(sender As Object, e As System.EventArgs) Handles CheckOutButton.Click
 
-        Dim strMID As String = ChildID_tb.Text
+        Dim strChild_ID As String = ChildID_tb.Text
         Dim strUserName As String = UserName_tb.Text
         Dim rentDate As DateTime = DateTime.Now
         Dim dateDueBack As DateTime = DateAdd("d", 30, Today)
@@ -28,9 +28,8 @@ Partial Class lib_checkOut
 
 
         sqlCmd.Parameters.Add(New SqlParameter("@UserName", strUserName))
-        sqlCmd.Parameters.Add(New SqlParameter("@ChildId", strChildID))
-        sqlCmd.Parameters.Add(New SqlParameter("@RentDate", rentDate))
-        sqlCmd.Parameters.Add(New SqlParameter("@DateDueBack", dateDueBack))
+        sqlCmd.Parameters.Add(New SqlParameter("@ChildId", strChild_ID))
+
 
         sqlconn.Open()
         sqlCmd.ExecuteNonQuery()
