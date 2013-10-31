@@ -1,0 +1,53 @@
+﻿<%@ Master Language="VB" MasterPageFile="~/MasterPage_Main.master" %>
+
+<script runat="server">
+
+</script>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+
+
+
+
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+
+
+
+    <div id="2col">
+
+
+
+  <asp:ContentPlaceHolder ID="leftcolumn" runat="server">
+  </asp:ContentPlaceHolder>
+
+
+
+  <asp:ContentPlaceHolder ID="rightcolumn" runat="server">
+  </asp:ContentPlaceHolder>
+
+
+
+
+</div>
+
+
+
+    <div> <h4>Adminstrator Panel</h4>
+
+        <ul class="admin_panel">
+                      <li><a href="Job.aspx">Add/Delete Jobs</a></li>
+                      <li><a href="Calendar.aspx">Add/Delete/Update a Child</a></li>
+                      <li><a href="Enrollment.aspx">Add/Delete/Update a Child</a></li>
+                      <li><a href="Employment.aspx">Employment</a></li>
+                    <li><a href="About.aspx">About us</a></li>
+                    <li><a href="Contact.aspx">Contact us</a></li>
+                    </ul>
+
+
+    </div>
+
+
+</asp:Content>
+
