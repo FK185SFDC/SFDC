@@ -1,4 +1,5 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/MasterPage_Main.master" AutoEventWireup="false" CodeFile="Employment.aspx.vb" Inherits="Employment" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/MasterPage_Main.master" AutoEventWireup="false" CodeFile="Employment.aspx.vb" 
+    Inherits="Employment" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
@@ -6,7 +7,9 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:fk185_DaycareConnectionString %>" SelectCommand="SELECT * FROM [JOB_POSTING]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+        ConnectionString="<%$ ConnectionStrings:fk185_DaycareConnectionString %>" 
+        SelectCommand="SELECT * FROM [JOB_POSTING]"></asp:SqlDataSource>
 
     <br /> <br />
 

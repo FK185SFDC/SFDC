@@ -34,14 +34,7 @@
                 </asp:LoginView>
             </div>
 
-
-
-
                 </td>
-
-
-
-
 
             </tr>
 
@@ -49,36 +42,38 @@
                 <td colspan="2">
 
                      <ul class="nav">
-                      <li><a href="../Default.aspx">Home</a></li>
-                      <li><a href="../Calendar.aspx">Calendar</a></li>
-                      <li><a href="../Enrollment.aspx">Enroll</a></li>
-                      <li><a href="../Employment.aspx">Employment</a></li>
-                    <li><a href="../About.aspx">About us</a></li>
-                    <li><a href="../Contact.aspx">Contact us</a></li>
+                      <li><a href="Default.aspx">Home</a></li>
+                      <li><a href="Calendar.aspx">Calendar</a></li>
+                      <li><a href="Enrollment.aspx">Enroll</a></li>
+                      <li><a href="Employment.aspx">Employment</a></li>
+                    <li><a href="About.aspx">About us</a></li>
+                    <li><a href="Contact.aspx">Contact us</a></li>
                     </ul>
 
                 </td>
             </tr>
 
             </table>
+
+
+
+
+
+
             <table class="auto-style2">
 
             <tr>
-                <td>
+                <td> <br />
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">        
         </asp:ContentPlaceHolder>
+                    <br />
                 </td>
 
-                <td>
-                    <img class="Img3" src="Images/dc5.jpg" />
-                    <img class="Img3" src="Images/dc4.jpg" />
-                    <img class="Img3" src="Images/daycare1.jpg" />
-                </td>
             </tr>
 
 
             <tr #id="footer">
-                <td colspan="2">&nbsp;</td>
+                <td>&nbsp;</td>
             </tr>
 
 
