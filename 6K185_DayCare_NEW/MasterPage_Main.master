@@ -73,7 +73,7 @@
 
 
             <tr #id="footer">
-                <td>&nbsp;</td>
+                <td><img id="img_footer" src="Images/daycare_footer.jpg" /></td>
             </tr>
 
 
