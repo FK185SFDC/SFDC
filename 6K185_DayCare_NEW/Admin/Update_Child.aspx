@@ -11,7 +11,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     
     <h3 class="cntl_h3">Add/Update a Child Information</h3> 
-    <br />
+   
+     <br />
 
     <% If Not IsPostBack Then%>  
     <asp:Label ID="lbl_Grt_Admin" runat="server"></asp:Label><br /><br />
