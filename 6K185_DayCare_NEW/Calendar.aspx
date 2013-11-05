@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/MasterPage_Main.master" AutoEventWireup="false" CodeFile="Calendar.aspx.vb" 
+﻿<%@ Page Title="" Language="VB" MasterPageFile="MasterPage_Main.master" AutoEventWireup="false" CodeFile="Calendar.aspx.vb" 
     Inherits="Calendar" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
