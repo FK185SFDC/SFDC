@@ -78,7 +78,7 @@
                 </Columns>
             </asp:GridView>
             <br />
-            <asp:DetailsView ID="DetailsView2" runat="server" Height="50px" Width="125px" AllowPaging="True" AutoGenerateRows="False" DataKeyNames="Staff_ID" DataSourceID="SqlDataSource1">
+            <asp:DetailsView ID="DetailsView2" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="Staff_ID" DataSourceID="SqlDataSource1" DefaultMode="Insert">
                 <Fields>
                     <asp:BoundField DataField="Staff_ID" HeaderText="Staff ID" ReadOnly="True" SortExpression="Staff_ID" />
                     <asp:BoundField DataField="F_Name" HeaderText="First Name" SortExpression="F_Name" />
@@ -93,7 +93,7 @@
                     <asp:BoundField DataField="End_Date" HeaderText="End Date" SortExpression="End_Date" />
                     <asp:BoundField DataField="Gender" HeaderText="Gender" SortExpression="Gender" />
                     <asp:BoundField DataField="Class_ID" HeaderText="Class ID" SortExpression="Class_ID" />
-                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowInsertButton="True" />
+                    <asp:CommandField ShowEditButton="True" ShowInsertButton="True" ButtonType="Button" InsertText="Add New" />
                 </Fields>
             </asp:DetailsView>
 

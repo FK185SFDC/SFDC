@@ -18,7 +18,9 @@
         <table class="auto-style1">
 
             <tr id="header">
-                <td id="top_pic"><img id="Left_header_pic" src="Images/daycare2.jpg" />
+                <td id="top_pic"><asp:Image ID="Left_header_pic" runat="server" ImageUrl="~/images/daycare2.jpg" />
+
+                    
 
 
 
@@ -38,17 +40,22 @@
 
             </tr>
 
-            <tr id="nav_cell">            
-                <td colspan="2">
+            <tr >            
+                <td id="nav_cell" colspan="2">
 
-                     <ul class="nav">
-                      <li><a href="Default.aspx">Home</a></li>
-                      <li><a href="Calendar.aspx">Calendar</a></li>
-                      <li><a href="Enrollment.aspx">Enroll</a></li>
-                      <li><a href="Employment.aspx">Employment</a></li>
-                    <li><a href="About.aspx">About us</a></li>
-                    <li><a href="Contact.aspx">Contact us</a></li>
-                    </ul>
+                    <asp:Menu ID="navigation" runat="server" BackColor="#B5C7DE" DataSourceID="SiteMapDataSource1" 
+                        DynamicHorizontalOffset="2" Font-Names="'Comic Sans MS',sans-serif,Arial,Tahoma" Font-Size="16px" 
+                        ForeColor="#284E98"  StaticSubMenuIndent="10px"  orientation="Horizontal"  >
+                        <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
+                        <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <DynamicMenuStyle BackColor="#B5C7DE" />
+                        <DynamicSelectedStyle BackColor="#507CD1" />
+                        <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
+                        <StaticMenuItemStyle HorizontalPadding="20px" VerticalPadding="6px" />
+                        <StaticSelectedStyle BackColor="#507CD1" />
+                    </asp:Menu>
+
+                    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="False" />
 
                 </td>
             </tr>
@@ -73,7 +80,8 @@
 
 
             <tr #id="footer">
-                <td><img id="img_footer" src="Images/daycare_footer.jpg" /></td>
+                <td><asp:Image ID="img_footer" runat="server" ImageUrl="~/images/daycare_footer.jpg" /></td>
+                
             </tr>
 
 

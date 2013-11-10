@@ -45,14 +45,36 @@
         </Columns>
     </asp:GridView>
     <br />
-    <asp:DetailsView ID="DetailsView1" runat="server" Height="50px" Width="125px" AllowPaging="True" AutoGenerateRows="False" DataKeyNames="Job_ID" DataSourceID="SqlDataSource1">
+    <asp:DetailsView ID="DetailsView1" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="Job_ID" DataSourceID="SqlDataSource1" DefaultMode="Insert">
         <Fields>
-            <asp:BoundField DataField="Job_ID" HeaderText="Job_ID" ReadOnly="True" SortExpression="Job_ID" />
-            <asp:BoundField DataField="Position" HeaderText="Position" SortExpression="Position" />
+            <asp:TemplateField HeaderText="Job_ID" SortExpression="Job_ID">
+                <EditItemTemplate>
+                    <asp:Label ID="Label1" runat="server" Text='<%# Eval("Job_ID") %>'></asp:Label>
+                </EditItemTemplate>
+                <InsertItemTemplate>
+                    <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("Job_ID") %>'></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1" ErrorMessage="*"></asp:RequiredFieldValidator>
+                </InsertItemTemplate>
+                <ItemTemplate>
+                    <asp:Label ID="Label1" runat="server" Text='<%# Bind("Job_ID") %>'></asp:Label>
+                </ItemTemplate>
+            </asp:TemplateField>
+            <asp:TemplateField HeaderText="Position" SortExpression="Position">
+                <EditItemTemplate>
+                    <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("Position") %>'></asp:TextBox>
+                </EditItemTemplate>
+                <InsertItemTemplate>
+                    <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("Position") %>'></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBox2" ErrorMessage="*"></asp:RequiredFieldValidator>
+                </InsertItemTemplate>
+                <ItemTemplate>
+                    <asp:Label ID="Label2" runat="server" Text='<%# Bind("Position") %>'></asp:Label>
+                </ItemTemplate>
+            </asp:TemplateField>
             <asp:BoundField DataField="Start_Date" HeaderText="Start_Date" SortExpression="Start_Date" />
             <asp:BoundField DataField="Closing_Date" HeaderText="Closing_Date" SortExpression="Closing_Date" />
             <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
-            <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowInsertButton="True" />
+            <asp:CommandField ShowInsertButton="True" ButtonType="Button" InsertText="Add New" />
         </Fields>
     </asp:DetailsView>
 

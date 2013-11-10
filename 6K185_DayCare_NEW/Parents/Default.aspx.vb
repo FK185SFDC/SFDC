@@ -1,5 +1,5 @@
 ﻿
-Partial Class Calendar
+Partial Class Parents_Default
     Inherits System.Web.UI.Page
 
 End Class
