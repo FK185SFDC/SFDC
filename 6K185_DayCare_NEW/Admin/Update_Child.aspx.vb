@@ -33,4 +33,19 @@ Partial Class Admin_Update_Child
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
         lbl_Grt_Admin.Text = "Welcome Adminstrator!"
     End Sub
+
+    Protected Sub GridView1_RowUpdated(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewUpdatedEventArgs) Handles Mother_GV.RowUpdated
+        'Test for an error during processing
+        If e.Exception IsNot Nothing Then
+            'Test for an exception during row update
+            lblError.Text = "An exception occurred. " & e.Exception.Message
+            'This suppresses the exception and keeps the
+            'row in EditMode
+            e.ExceptionHandled = True
+            e.KeepInEditMode = True
+        Else
+
+            lblError.Text = "Update succeeded."
+
+        End If
 End Class
