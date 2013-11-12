@@ -235,42 +235,323 @@
         </asp:View>
 
         <asp:View ID="Medical_Contact_View" runat="server">
-            <asp:SqlDataSource ID="SqlDataSource4" runat="server"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:fk185_DaycareConnectionString %>" DeleteCommand="DELETE FROM [MEDICAL_CONTACT] WHERE [Physician_ID] = @Physician_ID" InsertCommand="INSERT INTO [MEDICAL_CONTACT] ([Physician_ID], [Physician_FName], [Physician_LName], [Clinic_Name], [Address], [City], [State], [Zip_Code], [Phone]) VALUES (@Physician_ID, @Physician_FName, @Physician_LName, @Clinic_Name, @Address, @City, @State, @Zip_Code, @Phone)" SelectCommand="SELECT * FROM [MEDICAL_CONTACT]" UpdateCommand="UPDATE [MEDICAL_CONTACT] SET [Physician_FName] = @Physician_FName, [Physician_LName] = @Physician_LName, [Clinic_Name] = @Clinic_Name, [Address] = @Address, [City] = @City, [State] = @State, [Zip_Code] = @Zip_Code, [Phone] = @Phone WHERE [Physician_ID] = @Physician_ID">
+                <DeleteParameters>
+                    <asp:Parameter Name="Physician_ID" Type="Int32" />
+                </DeleteParameters>
+                <InsertParameters>
+                    <asp:Parameter Name="Physician_ID" Type="Int32" />
+                    <asp:Parameter Name="Physician_FName" Type="String" />
+                    <asp:Parameter Name="Physician_LName" Type="String" />
+                    <asp:Parameter Name="Clinic_Name" Type="String" />
+                    <asp:Parameter Name="Address" Type="String" />
+                    <asp:Parameter Name="City" Type="String" />
+                    <asp:Parameter Name="State" Type="String" />
+                    <asp:Parameter Name="Zip_Code" Type="String" />
+                    <asp:Parameter Name="Phone" Type="String" />
+                </InsertParameters>
+                <UpdateParameters>
+                    <asp:Parameter Name="Physician_FName" Type="String" />
+                    <asp:Parameter Name="Physician_LName" Type="String" />
+                    <asp:Parameter Name="Clinic_Name" Type="String" />
+                    <asp:Parameter Name="Address" Type="String" />
+                    <asp:Parameter Name="City" Type="String" />
+                    <asp:Parameter Name="State" Type="String" />
+                    <asp:Parameter Name="Zip_Code" Type="String" />
+                    <asp:Parameter Name="Phone" Type="String" />
+                    <asp:Parameter Name="Physician_ID" Type="Int32" />
+                </UpdateParameters>
+            </asp:SqlDataSource>
             <br />
-            <asp:GridView ID="GridView3" runat="server">
+            <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" DataKeyNames="Physician_ID" DataSourceID="SqlDataSource4">
+                <Columns>
+                    <asp:BoundField DataField="Physician_ID" HeaderText="Physician_ID" ReadOnly="True" SortExpression="Physician_ID" />
+                    <asp:BoundField DataField="Physician_FName" HeaderText="Physician_FName" SortExpression="Physician_FName" />
+                    <asp:BoundField DataField="Physician_LName" HeaderText="Physician_LName" SortExpression="Physician_LName" />
+                    <asp:BoundField DataField="Clinic_Name" HeaderText="Clinic_Name" SortExpression="Clinic_Name" />
+                    <asp:BoundField DataField="Address" HeaderText="Address" SortExpression="Address" />
+                    <asp:BoundField DataField="City" HeaderText="City" SortExpression="City" />
+                    <asp:BoundField DataField="State" HeaderText="State" SortExpression="State" />
+                    <asp:BoundField DataField="Zip_Code" HeaderText="Zip_Code" SortExpression="Zip_Code" />
+                    <asp:BoundField DataField="Phone" HeaderText="Phone" SortExpression="Phone" />
+                </Columns>
             </asp:GridView>
             <br />
-            <asp:DetailsView ID="DetailsView3" runat="server" Height="50px" Width="125px">
+            <asp:SqlDataSource ID="SqlDataSource8" runat="server" ConnectionString="<%$ ConnectionStrings:fk185_DaycareConnectionString %>" DeleteCommand="DELETE FROM [MEDICAL_CONTACT] WHERE [Physician_ID] = @Physician_ID" InsertCommand="INSERT INTO [MEDICAL_CONTACT] ([Physician_ID], [Physician_FName], [Physician_LName], [Clinic_Name], [Address], [City], [State], [Zip_Code], [Phone]) VALUES (@Physician_ID, @Physician_FName, @Physician_LName, @Clinic_Name, @Address, @City, @State, @Zip_Code, @Phone)" SelectCommand="SELECT * FROM [MEDICAL_CONTACT]" UpdateCommand="UPDATE [MEDICAL_CONTACT] SET [Physician_FName] = @Physician_FName, [Physician_LName] = @Physician_LName, [Clinic_Name] = @Clinic_Name, [Address] = @Address, [City] = @City, [State] = @State, [Zip_Code] = @Zip_Code, [Phone] = @Phone WHERE [Physician_ID] = @Physician_ID">
+                <DeleteParameters>
+                    <asp:Parameter Name="Physician_ID" Type="Int32" />
+                </DeleteParameters>
+                <InsertParameters>
+                    <asp:Parameter Name="Physician_ID" Type="Int32" />
+                    <asp:Parameter Name="Physician_FName" Type="String" />
+                    <asp:Parameter Name="Physician_LName" Type="String" />
+                    <asp:Parameter Name="Clinic_Name" Type="String" />
+                    <asp:Parameter Name="Address" Type="String" />
+                    <asp:Parameter Name="City" Type="String" />
+                    <asp:Parameter Name="State" Type="String" />
+                    <asp:Parameter Name="Zip_Code" Type="String" />
+                    <asp:Parameter Name="Phone" Type="String" />
+                </InsertParameters>
+                <UpdateParameters>
+                    <asp:Parameter Name="Physician_FName" Type="String" />
+                    <asp:Parameter Name="Physician_LName" Type="String" />
+                    <asp:Parameter Name="Clinic_Name" Type="String" />
+                    <asp:Parameter Name="Address" Type="String" />
+                    <asp:Parameter Name="City" Type="String" />
+                    <asp:Parameter Name="State" Type="String" />
+                    <asp:Parameter Name="Zip_Code" Type="String" />
+                    <asp:Parameter Name="Phone" Type="String" />
+                    <asp:Parameter Name="Physician_ID" Type="Int32" />
+                </UpdateParameters>
+            </asp:SqlDataSource>
+            <br />
+            <asp:DetailsView ID="DetailsView3" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="Physician_ID" DataSourceID="SqlDataSource8">
+                <Fields>
+                    <asp:BoundField DataField="Physician_ID" HeaderText="Physician_ID" ReadOnly="True" SortExpression="Physician_ID" />
+                    <asp:BoundField DataField="Physician_FName" HeaderText="Physician_FName" SortExpression="Physician_FName" />
+                    <asp:BoundField DataField="Physician_LName" HeaderText="Physician_LName" SortExpression="Physician_LName" />
+                    <asp:BoundField DataField="Clinic_Name" HeaderText="Clinic_Name" SortExpression="Clinic_Name" />
+                    <asp:BoundField DataField="Address" HeaderText="Address" SortExpression="Address" />
+                    <asp:BoundField DataField="City" HeaderText="City" SortExpression="City" />
+                    <asp:BoundField DataField="State" HeaderText="State" SortExpression="State" />
+                    <asp:BoundField DataField="Zip_Code" HeaderText="Zip_Code" SortExpression="Zip_Code" />
+                    <asp:BoundField DataField="Phone" HeaderText="Phone" SortExpression="Phone" />
+                </Fields>
             </asp:DetailsView>
         </asp:View>
 
         <asp:View ID="Gaurdian_View" runat="server">
-            <asp:SqlDataSource ID="SqlDataSource5" runat="server"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:fk185_DaycareConnectionString %>" DeleteCommand="DELETE FROM [GAURDIAN] WHERE [Gaurdian_ID] = @Gaurdian_ID" InsertCommand="INSERT INTO [GAURDIAN] ([Gaurdian_ID], [F_Name], [L_Name], [Address], [City], [State], [Zip_Code], [Email], [Phone]) VALUES (@Gaurdian_ID, @F_Name, @L_Name, @Address, @City, @State, @Zip_Code, @Email, @Phone)" SelectCommand="SELECT * FROM [GAURDIAN]" UpdateCommand="UPDATE [GAURDIAN] SET [F_Name] = @F_Name, [L_Name] = @L_Name, [Address] = @Address, [City] = @City, [State] = @State, [Zip_Code] = @Zip_Code, [Email] = @Email, [Phone] = @Phone WHERE [Gaurdian_ID] = @Gaurdian_ID">
+                <DeleteParameters>
+                    <asp:Parameter Name="Gaurdian_ID" Type="Int32" />
+                </DeleteParameters>
+                <InsertParameters>
+                    <asp:Parameter Name="Gaurdian_ID" Type="Int32" />
+                    <asp:Parameter Name="F_Name" Type="String" />
+                    <asp:Parameter Name="L_Name" Type="String" />
+                    <asp:Parameter Name="Address" Type="String" />
+                    <asp:Parameter Name="City" Type="String" />
+                    <asp:Parameter Name="State" Type="String" />
+                    <asp:Parameter Name="Zip_Code" Type="String" />
+                    <asp:Parameter Name="Email" Type="String" />
+                    <asp:Parameter Name="Phone" Type="String" />
+                </InsertParameters>
+                <UpdateParameters>
+                    <asp:Parameter Name="F_Name" Type="String" />
+                    <asp:Parameter Name="L_Name" Type="String" />
+                    <asp:Parameter Name="Address" Type="String" />
+                    <asp:Parameter Name="City" Type="String" />
+                    <asp:Parameter Name="State" Type="String" />
+                    <asp:Parameter Name="Zip_Code" Type="String" />
+                    <asp:Parameter Name="Email" Type="String" />
+                    <asp:Parameter Name="Phone" Type="String" />
+                    <asp:Parameter Name="Gaurdian_ID" Type="Int32" />
+                </UpdateParameters>
+            </asp:SqlDataSource>
             <br />
-            <asp:GridView ID="GridView4" runat="server">
+            <asp:GridView ID="GridView4" runat="server" AutoGenerateColumns="False" DataKeyNames="Gaurdian_ID" DataSourceID="SqlDataSource5">
+                <Columns>
+                    <asp:BoundField DataField="Gaurdian_ID" HeaderText="Gaurdian_ID" ReadOnly="True" SortExpression="Gaurdian_ID" />
+                    <asp:BoundField DataField="F_Name" HeaderText="F_Name" SortExpression="F_Name" />
+                    <asp:BoundField DataField="L_Name" HeaderText="L_Name" SortExpression="L_Name" />
+                    <asp:BoundField DataField="Address" HeaderText="Address" SortExpression="Address" />
+                    <asp:BoundField DataField="City" HeaderText="City" SortExpression="City" />
+                    <asp:BoundField DataField="State" HeaderText="State" SortExpression="State" />
+                    <asp:BoundField DataField="Zip_Code" HeaderText="Zip_Code" SortExpression="Zip_Code" />
+                    <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
+                    <asp:BoundField DataField="Phone" HeaderText="Phone" SortExpression="Phone" />
+                </Columns>
             </asp:GridView>
             <br />
-            <asp:DetailsView ID="DetailsView4" runat="server" Height="50px" Width="125px">
+            <asp:SqlDataSource ID="SqlDataSource9" runat="server" ConnectionString="<%$ ConnectionStrings:fk185_DaycareConnectionString %>" DeleteCommand="DELETE FROM [GAURDIAN] WHERE [Gaurdian_ID] = @Gaurdian_ID" InsertCommand="INSERT INTO [GAURDIAN] ([Gaurdian_ID], [F_Name], [L_Name], [Address], [City], [State], [Zip_Code], [Email], [Phone]) VALUES (@Gaurdian_ID, @F_Name, @L_Name, @Address, @City, @State, @Zip_Code, @Email, @Phone)" SelectCommand="SELECT * FROM [GAURDIAN]" UpdateCommand="UPDATE [GAURDIAN] SET [F_Name] = @F_Name, [L_Name] = @L_Name, [Address] = @Address, [City] = @City, [State] = @State, [Zip_Code] = @Zip_Code, [Email] = @Email, [Phone] = @Phone WHERE [Gaurdian_ID] = @Gaurdian_ID">
+                <DeleteParameters>
+                    <asp:Parameter Name="Gaurdian_ID" Type="Int32" />
+                </DeleteParameters>
+                <InsertParameters>
+                    <asp:Parameter Name="Gaurdian_ID" Type="Int32" />
+                    <asp:Parameter Name="F_Name" Type="String" />
+                    <asp:Parameter Name="L_Name" Type="String" />
+                    <asp:Parameter Name="Address" Type="String" />
+                    <asp:Parameter Name="City" Type="String" />
+                    <asp:Parameter Name="State" Type="String" />
+                    <asp:Parameter Name="Zip_Code" Type="String" />
+                    <asp:Parameter Name="Email" Type="String" />
+                    <asp:Parameter Name="Phone" Type="String" />
+                </InsertParameters>
+                <UpdateParameters>
+                    <asp:Parameter Name="F_Name" Type="String" />
+                    <asp:Parameter Name="L_Name" Type="String" />
+                    <asp:Parameter Name="Address" Type="String" />
+                    <asp:Parameter Name="City" Type="String" />
+                    <asp:Parameter Name="State" Type="String" />
+                    <asp:Parameter Name="Zip_Code" Type="String" />
+                    <asp:Parameter Name="Email" Type="String" />
+                    <asp:Parameter Name="Phone" Type="String" />
+                    <asp:Parameter Name="Gaurdian_ID" Type="Int32" />
+                </UpdateParameters>
+            </asp:SqlDataSource>
+            <br />
+            <asp:DetailsView ID="DetailsView4" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="Gaurdian_ID" DataSourceID="SqlDataSource9">
+                <Fields>
+                    <asp:BoundField DataField="Gaurdian_ID" HeaderText="Gaurdian_ID" ReadOnly="True" SortExpression="Gaurdian_ID" />
+                    <asp:BoundField DataField="F_Name" HeaderText="F_Name" SortExpression="F_Name" />
+                    <asp:BoundField DataField="L_Name" HeaderText="L_Name" SortExpression="L_Name" />
+                    <asp:BoundField DataField="Address" HeaderText="Address" SortExpression="Address" />
+                    <asp:BoundField DataField="City" HeaderText="City" SortExpression="City" />
+                    <asp:BoundField DataField="State" HeaderText="State" SortExpression="State" />
+                    <asp:BoundField DataField="Zip_Code" HeaderText="Zip_Code" SortExpression="Zip_Code" />
+                    <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
+                    <asp:BoundField DataField="Phone" HeaderText="Phone" SortExpression="Phone" />
+                </Fields>
             </asp:DetailsView>
         </asp:View>
 
         <asp:View ID="Class_View" runat="server">
-            <asp:SqlDataSource ID="SqlDataSource6" runat="server"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource6" runat="server" ConnectionString="<%$ ConnectionStrings:fk185_DaycareConnectionString %>" DeleteCommand="DELETE FROM [CLASS] WHERE [Class_ID] = @Class_ID" InsertCommand="INSERT INTO [CLASS] ([Class_ID], [Class_Name]) VALUES (@Class_ID, @Class_Name)" SelectCommand="SELECT * FROM [CLASS]" UpdateCommand="UPDATE [CLASS] SET [Class_Name] = @Class_Name WHERE [Class_ID] = @Class_ID">
+                <DeleteParameters>
+                    <asp:Parameter Name="Class_ID" Type="Int32" />
+                </DeleteParameters>
+                <InsertParameters>
+                    <asp:Parameter Name="Class_ID" Type="Int32" />
+                    <asp:Parameter Name="Class_Name" Type="String" />
+                </InsertParameters>
+                <UpdateParameters>
+                    <asp:Parameter Name="Class_Name" Type="String" />
+                    <asp:Parameter Name="Class_ID" Type="Int32" />
+                </UpdateParameters>
+            </asp:SqlDataSource>
             <br />
-            <asp:GridView ID="GridView5" runat="server">
+            <asp:GridView ID="GridView5" runat="server" AutoGenerateColumns="False" DataKeyNames="Class_ID" DataSourceID="SqlDataSource6">
+                <Columns>
+                    <asp:BoundField DataField="Class_ID" HeaderText="Class_ID" ReadOnly="True" SortExpression="Class_ID" />
+                    <asp:BoundField DataField="Class_Name" HeaderText="Class_Name" SortExpression="Class_Name" />
+                </Columns>
             </asp:GridView>
             <br />
-            <asp:DetailsView ID="DetailsView5" runat="server" Height="50px" Width="125px">
+            <asp:SqlDataSource ID="SqlDataSource10" runat="server" ConnectionString="<%$ ConnectionStrings:fk185_DaycareConnectionString %>" DeleteCommand="DELETE FROM [CLASS] WHERE [Class_ID] = @Class_ID" InsertCommand="INSERT INTO [CLASS] ([Class_ID], [Class_Name]) VALUES (@Class_ID, @Class_Name)" SelectCommand="SELECT * FROM [CLASS]" UpdateCommand="UPDATE [CLASS] SET [Class_Name] = @Class_Name WHERE [Class_ID] = @Class_ID">
+                <DeleteParameters>
+                    <asp:Parameter Name="Class_ID" Type="Int32" />
+                </DeleteParameters>
+                <InsertParameters>
+                    <asp:Parameter Name="Class_ID" Type="Int32" />
+                    <asp:Parameter Name="Class_Name" Type="String" />
+                </InsertParameters>
+                <UpdateParameters>
+                    <asp:Parameter Name="Class_Name" Type="String" />
+                    <asp:Parameter Name="Class_ID" Type="Int32" />
+                </UpdateParameters>
+            </asp:SqlDataSource>
+            <br />
+            <asp:DetailsView ID="DetailsView5" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="Class_ID" DataSourceID="SqlDataSource10">
+                <Fields>
+                    <asp:BoundField DataField="Class_ID" HeaderText="Class_ID" ReadOnly="True" SortExpression="Class_ID" />
+                    <asp:BoundField DataField="Class_Name" HeaderText="Class_Name" SortExpression="Class_Name" />
+                </Fields>
             </asp:DetailsView>
         </asp:View>
 
         <asp:View ID="Child_View" runat="server">
-            <asp:SqlDataSource ID="SqlDataSource7" runat="server"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource7" runat="server" ConnectionString="<%$ ConnectionStrings:fk185_DaycareConnectionString %>" DeleteCommand="DELETE FROM [CHILD] WHERE [Child_ID] = @Child_ID" InsertCommand="INSERT INTO [CHILD] ([Child_ID], [F_Name], [L_Name], [DOB], [Gender], [Physician_ID], [Class_ID], [Emergency_Contact_ID], [Mother_ID], [Father_ID], [Gaurdian_ID], [Address_Note]) VALUES (@Child_ID, @F_Name, @L_Name, @DOB, @Gender, @Physician_ID, @Class_ID, @Emergency_Contact_ID, @Mother_ID, @Father_ID, @Gaurdian_ID, @Address_Note)" SelectCommand="SELECT * FROM [CHILD]" UpdateCommand="UPDATE [CHILD] SET [F_Name] = @F_Name, [L_Name] = @L_Name, [DOB] = @DOB, [Gender] = @Gender, [Physician_ID] = @Physician_ID, [Class_ID] = @Class_ID, [Emergency_Contact_ID] = @Emergency_Contact_ID, [Mother_ID] = @Mother_ID, [Father_ID] = @Father_ID, [Gaurdian_ID] = @Gaurdian_ID, [Address_Note] = @Address_Note WHERE [Child_ID] = @Child_ID">
+                <DeleteParameters>
+                    <asp:Parameter Name="Child_ID" Type="Int32" />
+                </DeleteParameters>
+                <InsertParameters>
+                    <asp:Parameter Name="Child_ID" Type="Int32" />
+                    <asp:Parameter Name="F_Name" Type="String" />
+                    <asp:Parameter Name="L_Name" Type="String" />
+                    <asp:Parameter Name="DOB" Type="DateTime" />
+                    <asp:Parameter Name="Gender" Type="String" />
+                    <asp:Parameter Name="Physician_ID" Type="Int32" />
+                    <asp:Parameter Name="Class_ID" Type="Int32" />
+                    <asp:Parameter Name="Emergency_Contact_ID" Type="Int32" />
+                    <asp:Parameter Name="Mother_ID" Type="Int32" />
+                    <asp:Parameter Name="Father_ID" Type="Int32" />
+                    <asp:Parameter Name="Gaurdian_ID" Type="Int32" />
+                    <asp:Parameter Name="Address_Note" Type="String" />
+                </InsertParameters>
+                <UpdateParameters>
+                    <asp:Parameter Name="F_Name" Type="String" />
+                    <asp:Parameter Name="L_Name" Type="String" />
+                    <asp:Parameter Name="DOB" Type="DateTime" />
+                    <asp:Parameter Name="Gender" Type="String" />
+                    <asp:Parameter Name="Physician_ID" Type="Int32" />
+                    <asp:Parameter Name="Class_ID" Type="Int32" />
+                    <asp:Parameter Name="Emergency_Contact_ID" Type="Int32" />
+                    <asp:Parameter Name="Mother_ID" Type="Int32" />
+                    <asp:Parameter Name="Father_ID" Type="Int32" />
+                    <asp:Parameter Name="Gaurdian_ID" Type="Int32" />
+                    <asp:Parameter Name="Address_Note" Type="String" />
+                    <asp:Parameter Name="Child_ID" Type="Int32" />
+                </UpdateParameters>
+            </asp:SqlDataSource>
             <br />
-            <asp:GridView ID="GridView6" runat="server">
+            <br />
+            <asp:GridView ID="GridView6" runat="server" AutoGenerateColumns="False" DataKeyNames="Child_ID" DataSourceID="SqlDataSource7">
+                <Columns>
+                    <asp:BoundField DataField="Child_ID" HeaderText="Child_ID" ReadOnly="True" SortExpression="Child_ID" />
+                    <asp:BoundField DataField="F_Name" HeaderText="F_Name" SortExpression="F_Name" />
+                    <asp:BoundField DataField="L_Name" HeaderText="L_Name" SortExpression="L_Name" />
+                    <asp:BoundField DataField="DOB" HeaderText="DOB" SortExpression="DOB" />
+                    <asp:BoundField DataField="Gender" HeaderText="Gender" SortExpression="Gender" />
+                    <asp:BoundField DataField="Physician_ID" HeaderText="Physician_ID" SortExpression="Physician_ID" />
+                    <asp:BoundField DataField="Class_ID" HeaderText="Class_ID" SortExpression="Class_ID" />
+                    <asp:BoundField DataField="Emergency_Contact_ID" HeaderText="Emergency_Contact_ID" SortExpression="Emergency_Contact_ID" />
+                    <asp:BoundField DataField="Mother_ID" HeaderText="Mother_ID" SortExpression="Mother_ID" />
+                    <asp:BoundField DataField="Father_ID" HeaderText="Father_ID" SortExpression="Father_ID" />
+                    <asp:BoundField DataField="Gaurdian_ID" HeaderText="Gaurdian_ID" SortExpression="Gaurdian_ID" />
+                    <asp:BoundField DataField="Address_Note" HeaderText="Address_Note" SortExpression="Address_Note" />
+                </Columns>
             </asp:GridView>
             <br />
-            <asp:DetailsView ID="DetailsView6" runat="server" Height="50px" Width="125px">
+            <asp:SqlDataSource ID="SqlDataSource11" runat="server" ConnectionString="<%$ ConnectionStrings:fk185_DaycareConnectionString %>" DeleteCommand="DELETE FROM [CHILD] WHERE [Child_ID] = @Child_ID" InsertCommand="INSERT INTO [CHILD] ([Child_ID], [F_Name], [L_Name], [DOB], [Gender], [Physician_ID], [Class_ID], [Emergency_Contact_ID], [Mother_ID], [Father_ID], [Gaurdian_ID], [Address_Note]) VALUES (@Child_ID, @F_Name, @L_Name, @DOB, @Gender, @Physician_ID, @Class_ID, @Emergency_Contact_ID, @Mother_ID, @Father_ID, @Gaurdian_ID, @Address_Note)" SelectCommand="SELECT * FROM [CHILD]" UpdateCommand="UPDATE [CHILD] SET [F_Name] = @F_Name, [L_Name] = @L_Name, [DOB] = @DOB, [Gender] = @Gender, [Physician_ID] = @Physician_ID, [Class_ID] = @Class_ID, [Emergency_Contact_ID] = @Emergency_Contact_ID, [Mother_ID] = @Mother_ID, [Father_ID] = @Father_ID, [Gaurdian_ID] = @Gaurdian_ID, [Address_Note] = @Address_Note WHERE [Child_ID] = @Child_ID">
+                <DeleteParameters>
+                    <asp:Parameter Name="Child_ID" Type="Int32" />
+                </DeleteParameters>
+                <InsertParameters>
+                    <asp:Parameter Name="Child_ID" Type="Int32" />
+                    <asp:Parameter Name="F_Name" Type="String" />
+                    <asp:Parameter Name="L_Name" Type="String" />
+                    <asp:Parameter Name="DOB" Type="DateTime" />
+                    <asp:Parameter Name="Gender" Type="String" />
+                    <asp:Parameter Name="Physician_ID" Type="Int32" />
+                    <asp:Parameter Name="Class_ID" Type="Int32" />
+                    <asp:Parameter Name="Emergency_Contact_ID" Type="Int32" />
+                    <asp:Parameter Name="Mother_ID" Type="Int32" />
+                    <asp:Parameter Name="Father_ID" Type="Int32" />
+                    <asp:Parameter Name="Gaurdian_ID" Type="Int32" />
+                    <asp:Parameter Name="Address_Note" Type="String" />
+                </InsertParameters>
+                <UpdateParameters>
+                    <asp:Parameter Name="F_Name" Type="String" />
+                    <asp:Parameter Name="L_Name" Type="String" />
+                    <asp:Parameter Name="DOB" Type="DateTime" />
+                    <asp:Parameter Name="Gender" Type="String" />
+                    <asp:Parameter Name="Physician_ID" Type="Int32" />
+                    <asp:Parameter Name="Class_ID" Type="Int32" />
+                    <asp:Parameter Name="Emergency_Contact_ID" Type="Int32" />
+                    <asp:Parameter Name="Mother_ID" Type="Int32" />
+                    <asp:Parameter Name="Father_ID" Type="Int32" />
+                    <asp:Parameter Name="Gaurdian_ID" Type="Int32" />
+                    <asp:Parameter Name="Address_Note" Type="String" />
+                    <asp:Parameter Name="Child_ID" Type="Int32" />
+                </UpdateParameters>
+            </asp:SqlDataSource>
+            <br />
+            <asp:DetailsView ID="DetailsView6" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="Child_ID" DataSourceID="SqlDataSource11">
+                <Fields>
+                    <asp:BoundField DataField="Child_ID" HeaderText="Child_ID" ReadOnly="True" SortExpression="Child_ID" />
+                    <asp:BoundField DataField="F_Name" HeaderText="F_Name" SortExpression="F_Name" />
+                    <asp:BoundField DataField="L_Name" HeaderText="L_Name" SortExpression="L_Name" />
+                    <asp:BoundField DataField="DOB" HeaderText="DOB" SortExpression="DOB" />
+                    <asp:BoundField DataField="Gender" HeaderText="Gender" SortExpression="Gender" />
+                    <asp:BoundField DataField="Physician_ID" HeaderText="Physician_ID" SortExpression="Physician_ID" />
+                    <asp:BoundField DataField="Class_ID" HeaderText="Class_ID" SortExpression="Class_ID" />
+                    <asp:BoundField DataField="Emergency_Contact_ID" HeaderText="Emergency_Contact_ID" SortExpression="Emergency_Contact_ID" />
+                    <asp:BoundField DataField="Mother_ID" HeaderText="Mother_ID" SortExpression="Mother_ID" />
+                    <asp:BoundField DataField="Father_ID" HeaderText="Father_ID" SortExpression="Father_ID" />
+                    <asp:BoundField DataField="Gaurdian_ID" HeaderText="Gaurdian_ID" SortExpression="Gaurdian_ID" />
+                    <asp:BoundField DataField="Address_Note" HeaderText="Address_Note" SortExpression="Address_Note" />
+                </Fields>
             </asp:DetailsView>
         </asp:View>
 
