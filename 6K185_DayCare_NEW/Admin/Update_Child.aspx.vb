@@ -34,18 +34,21 @@ Partial Class Admin_Update_Child
         lbl_Grt_Admin.Text = "Welcome Adminstrator!"
     End Sub
 
-    Protected Sub GridView1_RowUpdated(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewUpdatedEventArgs) Handles Mother_GV.RowUpdated
+    Protected Sub Mother_DV_ItemUpdated(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.DetailsViewUpdatedEventArgs) Handles Mother_DV.ItemUpdated
         'Test for an error during processing
         If e.Exception IsNot Nothing Then
             'Test for an exception during row update
-            lblError.Text = "An exception occurred. " & e.Exception.Message
+            lblError.Text = "You must fill in all fields. " & ControlChars.NewLine & "Error message:" & e.Exception.Message
             'This suppresses the exception and keeps the
             'row in EditMode
             e.ExceptionHandled = True
             e.KeepInEditMode = True
         Else
 
-            lblError.Text = "Update succeeded."
+            lblError.Text = "Update succeeded. All database entries have been recorded. Thank you."
 
         End If
+    End Sub
+
+   
 End Class

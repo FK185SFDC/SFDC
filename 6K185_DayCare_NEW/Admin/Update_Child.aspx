@@ -93,6 +93,10 @@
                 <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
             </asp:DetailsView>
 
+            <asp:Label ID="lblError" runat="server" ForeColor="Red" Text="*All fields are required."></asp:Label>
+            <br />
+            <br />
+
             <br />
             <asp:GridView ID="Mother_GV" runat="server" AllowPaging="True" AllowSorting="True" 
                 DataSourceID="SqlDataSource1" AutoGenerateColumns="False" DataKeyNames="Mother_ID" 
