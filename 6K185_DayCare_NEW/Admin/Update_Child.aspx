@@ -67,9 +67,9 @@
                     <asp:Parameter Name="Mother_ID" Type="Int32" />
                 </UpdateParameters>
             </asp:SqlDataSource><br />
-            <asp:DetailsView ID="Mother_DV" runat="server" Height="50px" Width="226px" AllowPaging="True" 
+            <asp:DetailsView ID="Mother_DV" runat="server" Height="50px" Width="226px" 
                 AutoGenerateRows="False" DataKeyNames="Mother_ID" DataSourceID="SqlDataSource1" CellPadding="4" 
-                ForeColor="#333333" GridLines="None">
+                ForeColor="#333333" GridLines="None" DefaultMode="Insert">
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                 <CommandRowStyle BackColor="#E2DED6" Font-Bold="True" />
                 <EditRowStyle BackColor="#999999" />
@@ -85,7 +85,7 @@
                     <asp:BoundField DataField="Zip_Code" HeaderText="Zip_Code" SortExpression="Zip_Code" />
                     <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
                     <asp:BoundField DataField="Phone" HeaderText="Phone" SortExpression="Phone" />
-                    <asp:CommandField ShowInsertButton="True" ShowDeleteButton="True" ShowEditButton="True" />
+                    <asp:CommandField ShowInsertButton="True" ButtonType="Button" InsertText="Add New" />
                 </Fields>
                 <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
                 <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
@@ -173,7 +173,7 @@
                 </Columns>
             </asp:GridView>
             <br />
-            <asp:DetailsView ID="DetailsView1" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="Father_ID" DataSourceID="SqlDataSource2">
+            <asp:DetailsView ID="DetailsView1" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="Father_ID" DataSourceID="SqlDataSource2" DefaultMode="Insert">
                 <Fields>
                     <asp:BoundField DataField="Father_ID" HeaderText="Father_ID" ReadOnly="True" SortExpression="Father_ID" />
                     <asp:BoundField DataField="F_Name" HeaderText="F_Name" SortExpression="F_Name" />
@@ -184,6 +184,7 @@
                     <asp:BoundField DataField="Zip_Code" HeaderText="Zip_Code" SortExpression="Zip_Code" />
                     <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
                     <asp:BoundField DataField="Phone" HeaderText="Phone" SortExpression="Phone" />
+                    <asp:CommandField ButtonType="Button" InsertText="Add New" ShowInsertButton="True" />
                 </Fields>
             </asp:DetailsView>
             <br />
@@ -225,7 +226,7 @@
                 </Columns>
             </asp:GridView>
             <br />
-            <asp:DetailsView ID="DetailsView2" runat="server" Height="50px" Width="125px" AllowPaging="True" AutoGenerateRows="False" DataKeyNames="Emergency_Contact_ID" DataSourceID="SqlDataSource3">
+            <asp:DetailsView ID="DetailsView2" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="Emergency_Contact_ID" DataSourceID="SqlDataSource3" DefaultMode="Insert">
                 <Fields>
                     <asp:BoundField DataField="Emergency_Contact_ID" HeaderText="Emergency_Contact_ID" ReadOnly="True" SortExpression="Emergency_Contact_ID" />
                     <asp:BoundField DataField="F_Name" HeaderText="F_Name" SortExpression="F_Name" />
@@ -233,7 +234,7 @@
                     <asp:BoundField DataField="Phone_Home" HeaderText="Phone_Home" SortExpression="Phone_Home" />
                     <asp:BoundField DataField="Phone_Work" HeaderText="Phone_Work" SortExpression="Phone_Work" />
                     <asp:BoundField DataField="Phone_Cell" HeaderText="Phone_Cell" SortExpression="Phone_Cell" />
-                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowInsertButton="True" />
+                    <asp:CommandField ShowInsertButton="True" ButtonType="Button" InsertText="Add New" />
                 </Fields>
             </asp:DetailsView>
         </asp:View>
@@ -309,7 +310,7 @@
                 </UpdateParameters>
             </asp:SqlDataSource>
             <br />
-            <asp:DetailsView ID="DetailsView3" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="Physician_ID" DataSourceID="SqlDataSource8">
+            <asp:DetailsView ID="DetailsView3" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="Physician_ID" DataSourceID="SqlDataSource8" DefaultMode="Insert">
                 <Fields>
                     <asp:BoundField DataField="Physician_ID" HeaderText="Physician_ID" ReadOnly="True" SortExpression="Physician_ID" />
                     <asp:BoundField DataField="Physician_FName" HeaderText="Physician_FName" SortExpression="Physician_FName" />
@@ -320,6 +321,7 @@
                     <asp:BoundField DataField="State" HeaderText="State" SortExpression="State" />
                     <asp:BoundField DataField="Zip_Code" HeaderText="Zip_Code" SortExpression="Zip_Code" />
                     <asp:BoundField DataField="Phone" HeaderText="Phone" SortExpression="Phone" />
+                    <asp:CommandField ButtonType="Button" InsertText="Add New" ShowInsertButton="True" />
                 </Fields>
             </asp:DetailsView>
         </asp:View>
@@ -395,7 +397,7 @@
                 </UpdateParameters>
             </asp:SqlDataSource>
             <br />
-            <asp:DetailsView ID="DetailsView4" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="Gaurdian_ID" DataSourceID="SqlDataSource9">
+            <asp:DetailsView ID="DetailsView4" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="Gaurdian_ID" DataSourceID="SqlDataSource9" DefaultMode="Insert">
                 <Fields>
                     <asp:BoundField DataField="Gaurdian_ID" HeaderText="Gaurdian_ID" ReadOnly="True" SortExpression="Gaurdian_ID" />
                     <asp:BoundField DataField="F_Name" HeaderText="F_Name" SortExpression="F_Name" />
@@ -406,6 +408,7 @@
                     <asp:BoundField DataField="Zip_Code" HeaderText="Zip_Code" SortExpression="Zip_Code" />
                     <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
                     <asp:BoundField DataField="Phone" HeaderText="Phone" SortExpression="Phone" />
+                    <asp:CommandField ButtonType="Button" InsertText="Add New" ShowInsertButton="True" />
                 </Fields>
             </asp:DetailsView>
         </asp:View>
@@ -446,10 +449,11 @@
                 </UpdateParameters>
             </asp:SqlDataSource>
             <br />
-            <asp:DetailsView ID="DetailsView5" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="Class_ID" DataSourceID="SqlDataSource10">
+            <asp:DetailsView ID="DetailsView5" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="Class_ID" DataSourceID="SqlDataSource10" DefaultMode="Insert">
                 <Fields>
                     <asp:BoundField DataField="Class_ID" HeaderText="Class_ID" ReadOnly="True" SortExpression="Class_ID" />
                     <asp:BoundField DataField="Class_Name" HeaderText="Class_Name" SortExpression="Class_Name" />
+                    <asp:CommandField ButtonType="Button" InsertText="Add New" ShowInsertButton="True" />
                 </Fields>
             </asp:DetailsView>
         </asp:View>
@@ -541,7 +545,7 @@
                 </UpdateParameters>
             </asp:SqlDataSource>
             <br />
-            <asp:DetailsView ID="DetailsView6" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="Child_ID" DataSourceID="SqlDataSource11">
+            <asp:DetailsView ID="DetailsView6" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="Child_ID" DataSourceID="SqlDataSource11" DefaultMode="Insert">
                 <Fields>
                     <asp:BoundField DataField="Child_ID" HeaderText="Child_ID" ReadOnly="True" SortExpression="Child_ID" />
                     <asp:BoundField DataField="F_Name" HeaderText="F_Name" SortExpression="F_Name" />
@@ -555,6 +559,7 @@
                     <asp:BoundField DataField="Father_ID" HeaderText="Father_ID" SortExpression="Father_ID" />
                     <asp:BoundField DataField="Gaurdian_ID" HeaderText="Gaurdian_ID" SortExpression="Gaurdian_ID" />
                     <asp:BoundField DataField="Address_Note" HeaderText="Address_Note" SortExpression="Address_Note" />
+                    <asp:CommandField ButtonType="Button" InsertText="Add New" ShowInsertButton="True" />
                 </Fields>
             </asp:DetailsView>
         </asp:View>
