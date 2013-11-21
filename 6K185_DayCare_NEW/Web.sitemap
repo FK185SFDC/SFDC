@@ -20,6 +20,7 @@
         <siteMapNode url="~/Admin/Update_Child.aspx"  title="Child Information"  description="" />
         <siteMapNode url="~/Admin/Staff_Payroll.aspx" title="Staff Information"  description="" />
         <siteMapNode url="~/Admin/job.aspx"           title="Job Update"  description="" />
+        <siteMapNode url="~/Admin/Calendar.aspx"           title="Calendar"  description="" />
         </siteMapNode>
 
 
