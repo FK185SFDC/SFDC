@@ -127,6 +127,9 @@
                 <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
             </asp:GridView>
 
+            <br />
+            <asp:Label ID="lblError2" runat="server" Text="*All fields are required." ForeColor="Red"></asp:Label>
+
         </asp:View>
 
         <asp:View ID="Father_View" runat="server">
@@ -172,6 +175,8 @@
                     <asp:BoundField DataField="Phone" HeaderText="Phone" SortExpression="Phone" />
                 </Columns>
             </asp:GridView>
+            <asp:Label ID="lblError3" runat="server" Text="*All fields are required." ForeColor="Red"></asp:Label>
+            <br />
             <br />
             <asp:DetailsView ID="DetailsView1" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="Father_ID" DataSourceID="SqlDataSource2" DefaultMode="Insert">
                 <Fields>
@@ -187,6 +192,7 @@
                     <asp:CommandField ButtonType="Button" InsertText="Add New" ShowInsertButton="True" />
                 </Fields>
             </asp:DetailsView>
+            <asp:Label ID="lblError14" runat="server" Text="*All fields are required." ForeColor="Red"></asp:Label>
             <br />
             <br />
         </asp:View>
@@ -225,6 +231,8 @@
                     <asp:BoundField DataField="Phone_Cell" HeaderText="Phone_Cell" SortExpression="Phone_Cell" />
                 </Columns>
             </asp:GridView>
+            <asp:Label ID="lblError4" runat="server" Text="*All fields are required." ForeColor="Red"></asp:Label>
+            <br />
             <br />
             <asp:DetailsView ID="DetailsView2" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="Emergency_Contact_ID" DataSourceID="SqlDataSource3" DefaultMode="Insert">
                 <Fields>
@@ -237,6 +245,8 @@
                     <asp:CommandField ShowInsertButton="True" ButtonType="Button" InsertText="Add New" />
                 </Fields>
             </asp:DetailsView>
+            <br />
+            <asp:Label ID="lblError13" runat="server" Text="*All fields are required." ForeColor="Red"></asp:Label>
         </asp:View>
 
         <asp:View ID="Medical_Contact_View" runat="server">
@@ -281,6 +291,9 @@
                     <asp:BoundField DataField="Phone" HeaderText="Phone" SortExpression="Phone" />
                 </Columns>
             </asp:GridView>
+            <asp:Label ID="lblError5" runat="server" Text="*All fields are required." ForeColor="Red"></asp:Label>
+            <br />
+            <br />
             <br />
             <asp:SqlDataSource ID="SqlDataSource8" runat="server" ConnectionString="<%$ ConnectionStrings:fk185_DaycareConnectionString %>" DeleteCommand="DELETE FROM [MEDICAL_CONTACT] WHERE [Physician_ID] = @Physician_ID" InsertCommand="INSERT INTO [MEDICAL_CONTACT] ([Physician_ID], [Physician_FName], [Physician_LName], [Clinic_Name], [Address], [City], [State], [Zip_Code], [Phone]) VALUES (@Physician_ID, @Physician_FName, @Physician_LName, @Clinic_Name, @Address, @City, @State, @Zip_Code, @Phone)" SelectCommand="SELECT * FROM [MEDICAL_CONTACT]" UpdateCommand="UPDATE [MEDICAL_CONTACT] SET [Physician_FName] = @Physician_FName, [Physician_LName] = @Physician_LName, [Clinic_Name] = @Clinic_Name, [Address] = @Address, [City] = @City, [State] = @State, [Zip_Code] = @Zip_Code, [Phone] = @Phone WHERE [Physician_ID] = @Physician_ID">
                 <DeleteParameters>
@@ -324,6 +337,8 @@
                     <asp:CommandField ButtonType="Button" InsertText="Add New" ShowInsertButton="True" />
                 </Fields>
             </asp:DetailsView>
+            <br />
+            <asp:Label ID="lblError12" runat="server" Text="*All fields are required." ForeColor="Red"></asp:Label>
         </asp:View>
 
         <asp:View ID="Gaurdian_View" runat="server">
@@ -368,6 +383,8 @@
                     <asp:BoundField DataField="Phone" HeaderText="Phone" SortExpression="Phone" />
                 </Columns>
             </asp:GridView>
+            <asp:Label ID="lblError6" runat="server" Text="*All fields are required." ForeColor="Red"></asp:Label>
+            <br />
             <br />
             <asp:SqlDataSource ID="SqlDataSource9" runat="server" ConnectionString="<%$ ConnectionStrings:fk185_DaycareConnectionString %>" DeleteCommand="DELETE FROM [GAURDIAN] WHERE [Gaurdian_ID] = @Gaurdian_ID" InsertCommand="INSERT INTO [GAURDIAN] ([Gaurdian_ID], [F_Name], [L_Name], [Address], [City], [State], [Zip_Code], [Email], [Phone]) VALUES (@Gaurdian_ID, @F_Name, @L_Name, @Address, @City, @State, @Zip_Code, @Email, @Phone)" SelectCommand="SELECT * FROM [GAURDIAN]" UpdateCommand="UPDATE [GAURDIAN] SET [F_Name] = @F_Name, [L_Name] = @L_Name, [Address] = @Address, [City] = @City, [State] = @State, [Zip_Code] = @Zip_Code, [Email] = @Email, [Phone] = @Phone WHERE [Gaurdian_ID] = @Gaurdian_ID">
                 <DeleteParameters>
@@ -411,6 +428,8 @@
                     <asp:CommandField ButtonType="Button" InsertText="Add New" ShowInsertButton="True" />
                 </Fields>
             </asp:DetailsView>
+            <asp:Label ID="lblError11" runat="server" Text="*All fields are required." ForeColor="Red"></asp:Label>
+            <br />
         </asp:View>
 
         <asp:View ID="Class_View" runat="server">
@@ -434,6 +453,8 @@
                     <asp:BoundField DataField="Class_Name" HeaderText="Class_Name" SortExpression="Class_Name" />
                 </Columns>
             </asp:GridView>
+            <asp:Label ID="lblError7" runat="server" Text="*All fields are required." ForeColor="Red"></asp:Label>
+            <br />
             <br />
             <asp:SqlDataSource ID="SqlDataSource10" runat="server" ConnectionString="<%$ ConnectionStrings:fk185_DaycareConnectionString %>" DeleteCommand="DELETE FROM [CLASS] WHERE [Class_ID] = @Class_ID" InsertCommand="INSERT INTO [CLASS] ([Class_ID], [Class_Name]) VALUES (@Class_ID, @Class_Name)" SelectCommand="SELECT * FROM [CLASS]" UpdateCommand="UPDATE [CLASS] SET [Class_Name] = @Class_Name WHERE [Class_ID] = @Class_ID">
                 <DeleteParameters>
@@ -456,6 +477,8 @@
                     <asp:CommandField ButtonType="Button" InsertText="Add New" ShowInsertButton="True" />
                 </Fields>
             </asp:DetailsView>
+            <br />
+            <asp:Label ID="lblError10" runat="server" Text="*All fields are required." ForeColor="Red"></asp:Label>
         </asp:View>
 
         <asp:View ID="Child_View" runat="server">
@@ -494,8 +517,9 @@
             </asp:SqlDataSource>
             <br />
             <br />
-            <asp:GridView ID="GridView6" runat="server" AutoGenerateColumns="False" DataKeyNames="Child_ID" DataSourceID="SqlDataSource7">
+            <asp:GridView ID="GridView6" runat="server" AutoGenerateColumns="False" DataKeyNames="Child_ID" DataSourceID="SqlDataSource7" AllowPaging="True" AllowSorting="True">
                 <Columns>
+                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True" />
                     <asp:BoundField DataField="Child_ID" HeaderText="Child_ID" ReadOnly="True" SortExpression="Child_ID" />
                     <asp:BoundField DataField="F_Name" HeaderText="F_Name" SortExpression="F_Name" />
                     <asp:BoundField DataField="L_Name" HeaderText="L_Name" SortExpression="L_Name" />
@@ -510,6 +534,8 @@
                     <asp:BoundField DataField="Address_Note" HeaderText="Address_Note" SortExpression="Address_Note" />
                 </Columns>
             </asp:GridView>
+            <asp:Label ID="lblError8" runat="server" Text="*All fields are required." ForeColor="Red"></asp:Label>
+            <br />
             <br />
             <asp:SqlDataSource ID="SqlDataSource11" runat="server" ConnectionString="<%$ ConnectionStrings:fk185_DaycareConnectionString %>" DeleteCommand="DELETE FROM [CHILD] WHERE [Child_ID] = @Child_ID" InsertCommand="INSERT INTO [CHILD] ([Child_ID], [F_Name], [L_Name], [DOB], [Gender], [Physician_ID], [Class_ID], [Emergency_Contact_ID], [Mother_ID], [Father_ID], [Gaurdian_ID], [Address_Note]) VALUES (@Child_ID, @F_Name, @L_Name, @DOB, @Gender, @Physician_ID, @Class_ID, @Emergency_Contact_ID, @Mother_ID, @Father_ID, @Gaurdian_ID, @Address_Note)" SelectCommand="SELECT * FROM [CHILD]" UpdateCommand="UPDATE [CHILD] SET [F_Name] = @F_Name, [L_Name] = @L_Name, [DOB] = @DOB, [Gender] = @Gender, [Physician_ID] = @Physician_ID, [Class_ID] = @Class_ID, [Emergency_Contact_ID] = @Emergency_Contact_ID, [Mother_ID] = @Mother_ID, [Father_ID] = @Father_ID, [Gaurdian_ID] = @Gaurdian_ID, [Address_Note] = @Address_Note WHERE [Child_ID] = @Child_ID">
                 <DeleteParameters>
@@ -562,6 +588,8 @@
                     <asp:CommandField ButtonType="Button" InsertText="Add New" ShowInsertButton="True" />
                 </Fields>
             </asp:DetailsView>
+            <br />
+            <asp:Label ID="lblError9" runat="server" Text="*All fields are required." ForeColor="Red"></asp:Label>
         </asp:View>
 
         
