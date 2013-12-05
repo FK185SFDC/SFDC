@@ -1,0 +1,69 @@
+﻿<%@ Master Language="VB" MasterPageFile="~/MasterPage_Main.master" AutoEventWireup="false" 
+    CodeFile="MasterPage_Parent.master.vb" Inherits="Parents_MasterPage_Parent" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server"><br /><br />
+
+
+    <div id="leftt">
+
+        <br />
+        <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Calendar.aspx" Font-Underline="False" Target="_blank">View Upcoming Events</asp:HyperLink>
+        <br />
+        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Parents/Parent_Meal_Report.aspx" Font-Underline="False">View Meal Report</asp:HyperLink>
+        <br />
+        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Parents/Parent_Accident_Report.aspx" Font-Underline="False">View Accident Report</asp:HyperLink>
+        <br />
+        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Parents/Parent_Contact_Info.aspx" Font-Underline="False">View Contact Information</asp:HyperLink>
+        <br />
+        <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Parents/Parent_Emergency_Info.aspx" Font-Underline="False">View Emergency Contact</asp:HyperLink>
+        <br />
+        <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Contact.aspx" Target="_blank" Font-Underline="False">Request update Contact Information</asp:HyperLink>
+        <br /><br /><br /><br />
+        
+       
+
+    </div>
+
+
+
+
+      <div id="main_parent_div">
+
+
+         <div class="parent_div"><asp:ContentPlaceHolder ID="right" runat="server">
+        </asp:ContentPlaceHolder>
+        </div><br /><br /><br />
+         
+
+
+
+        
+        <br />
+        
+         <br />
+
+
+
+
+        <br />
+
+
+        
+             
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <br /><br />
+</asp:Content>

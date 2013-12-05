@@ -20,7 +20,6 @@
             <asp:BoundField DataField="Start_Date" HeaderText="Start_Date" SortExpression="Start_Date" />
             <asp:BoundField DataField="Closing_Date" HeaderText="Closing_Date" SortExpression="Closing_Date" />
             <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
-            <asp:HyperLinkField HeaderText="Apply For a Job" Text="Apply" />
         </Columns>
     </asp:GridView>
 
