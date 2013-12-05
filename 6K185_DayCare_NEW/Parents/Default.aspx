@@ -4,7 +4,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="right" Runat="Server">
 
 
-    This is Parents Default page appears in this ContentPlaceHolder.<br />
+    This is Parents Default page appears in this ContentPlaceHolder .<br /><br />
     
     <br />
 
