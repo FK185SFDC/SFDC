@@ -9,5 +9,6 @@
     <asp:TextBox ID="subjectTextBox" runat="server"></asp:TextBox><br /><br />
 
     <asp:Button ID="deleteButton" runat="server" Text="Delete Event" />
+    <asp:Button ID="cancelButton" runat="server" Text="Cancel" />
 </asp:Content>
 

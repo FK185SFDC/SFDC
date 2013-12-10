@@ -89,4 +89,7 @@ Partial Class Admin_createEvent
         Response.Redirect("Calendar.aspx")
 
     End Sub
+    Protected Sub cancelButton_Click(sender As Object, e As EventArgs) Handles cancelButton.Click
+        Response.Redirect("Calendar.aspx")
+    End Sub
 End Class
