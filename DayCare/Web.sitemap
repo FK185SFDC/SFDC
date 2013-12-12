@@ -6,7 +6,7 @@
       
         <siteMapNode url="~/Default.aspx"      title="Home"  description="" />
         <siteMapNode url="~/Calendar.aspx"     title="Calendar"  description="" />
-        <siteMapNode url="~/Enrollment.aspx"   title="Enroll"  description="" />
+       <!-- <siteMapNode url="~/Enrollment.aspx"   title="Enroll"  description="" /> -->
         <siteMapNode url="~/Employment.aspx"   title="Employment"  description="" />
         <siteMapNode url="~/About.aspx"        title="About us"  description="" />
         <siteMapNode url="~/Contact.aspx"      title="Contact us"  description="" />
