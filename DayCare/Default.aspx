@@ -14,10 +14,13 @@
 
             <br /><br />
             </p>
-            <h3>Location</h3>
-             We are located in Iowa City, IA. <br />
+            <h3>Address:</h3> 21 E Market St, Iowa City, IA 
+        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl ="https://maps.google.com/maps?ie=UTF-8&q=Henry+B.+Tippie+College+of+Business&fb=1&gl=us&hq=university+of+iowa+business+school&cid=4562099981539243599&ei=btypUvrJG-PayAHxzYCICQ&ved=0CKsBEPwSMAs"
+             Text="Click here for map!" Target="_blank" /> <br />
+        <h3>Phone Number:</h3> 319.340.1234<br />
+        <h3>Hours of Operation:</h3> Monday - Friday: 6:30 AM to 6:30 PM<br />
 
-         <asp:HyperLink runat="server" NavigateUrl="https://maps.google.com/maps?ie=UTF-8&q=Henry+B.+Tippie+College+of+Business&fb=1&gl=us&hq=university+of+iowa+business+school&cid=4562099981539243599&ei=btypUvrJG-PayAHxzYCICQ&ved=0CKsBEPwSMAs" Text="Click here for map!" /> 
+         
                
             
 
