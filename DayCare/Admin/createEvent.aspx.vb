@@ -380,7 +380,7 @@ Partial Class Admin_createEvent
         Loop
 
         Dim k As Integer = 15
-        Do While (k <= 60)
+        Do While (k < 60)
             m = New ListItem
             m.Text = k.ToString
             m.Value = k.ToString
@@ -393,14 +393,6 @@ Partial Class Admin_createEvent
         ddlPeriod.Items.Add("PM")
         ddlPeriod2.Items.Add("AM")
         ddlPeriod2.Items.Add("PM")
-
-
-
-
-
-
-
-
 
 
     End Sub
