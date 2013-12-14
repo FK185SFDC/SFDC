@@ -75,14 +75,14 @@
                 <EditRowStyle BackColor="#999999" />
                 <FieldHeaderStyle BackColor="#E9ECF1" Font-Bold="True" />
                 <Fields>
-                    <asp:BoundField DataField="Mother_ID" HeaderText="Mother_ID" ReadOnly="True" 
+                    <asp:BoundField DataField="Mother_ID" HeaderText="Mother ID" ReadOnly="True" 
                         SortExpression="Mother_ID" />
-                    <asp:BoundField DataField="F_Name" HeaderText="F_Name" SortExpression="F_Name" />
-                    <asp:BoundField DataField="L_Name" HeaderText="L_Name" SortExpression="L_Name" />
+                    <asp:BoundField DataField="F_Name" HeaderText="First Name" SortExpression="F_Name" />
+                    <asp:BoundField DataField="L_Name" HeaderText="Last Name" SortExpression="L_Name" />
                     <asp:BoundField DataField="Address" HeaderText="Address" SortExpression="Address" />
                     <asp:BoundField DataField="City" HeaderText="City" SortExpression="City" />
                     <asp:BoundField DataField="State" HeaderText="State" SortExpression="State" />
-                    <asp:BoundField DataField="Zip_Code" HeaderText="Zip_Code" SortExpression="Zip_Code" />
+                    <asp:BoundField DataField="Zip_Code" HeaderText="Zip" SortExpression="Zip_Code" />
                     <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
                     <asp:BoundField DataField="Phone" HeaderText="Phone" SortExpression="Phone" />
                     <asp:CommandField ShowInsertButton="True" ButtonType="Button" InsertText="Add New" />
@@ -103,15 +103,15 @@
                 CellPadding="4" ForeColor="#333333" GridLines="None">
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                 <Columns>
-                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True" />
-                    <asp:BoundField DataField="Mother_ID" HeaderText="Mother_ID" ReadOnly="True" 
+                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+                    <asp:BoundField DataField="Mother_ID" HeaderText="Mother ID" ReadOnly="True" 
                         SortExpression="Mother_ID" />
-                    <asp:BoundField DataField="F_Name" HeaderText="F_Name" SortExpression="F_Name" />
-                    <asp:BoundField DataField="L_Name" HeaderText="L_Name" SortExpression="L_Name" />
+                    <asp:BoundField DataField="F_Name" HeaderText="First Name" SortExpression="F_Name" />
+                    <asp:BoundField DataField="L_Name" HeaderText="Last Name" SortExpression="L_Name" />
                     <asp:BoundField DataField="Address" HeaderText="Address" SortExpression="Address" />
                     <asp:BoundField DataField="City" HeaderText="City" SortExpression="City" />
                     <asp:BoundField DataField="State" HeaderText="State" SortExpression="State" />
-                    <asp:BoundField DataField="Zip_Code" HeaderText="Zip_Code" SortExpression="Zip_Code" />
+                    <asp:BoundField DataField="Zip_Code" HeaderText="Zip" SortExpression="Zip_Code" />
                     <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
                     <asp:BoundField DataField="Phone" HeaderText="Phone" SortExpression="Phone" />
                 </Columns>
@@ -160,14 +160,14 @@
             <br />
             <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Father_ID" DataSourceID="SqlDataSource2">
                 <Columns>
-                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True" />
-                    <asp:BoundField DataField="Father_ID" HeaderText="Father_ID" ReadOnly="True" SortExpression="Father_ID" />
-                    <asp:BoundField DataField="F_Name" HeaderText="F_Name" SortExpression="F_Name" />
-                    <asp:BoundField DataField="L_NAme" HeaderText="L_NAme" SortExpression="L_NAme" />
+                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+                    <asp:BoundField DataField="Father_ID" HeaderText="Father ID" ReadOnly="True" SortExpression="Father_ID" />
+                    <asp:BoundField DataField="F_Name" HeaderText="First Name" SortExpression="F_Name" />
+                    <asp:BoundField DataField="L_NAme" HeaderText="Last Name" SortExpression="L_NAme" />
                     <asp:BoundField DataField="Address" HeaderText="Address" SortExpression="Address" />
                     <asp:BoundField DataField="City" HeaderText="City" SortExpression="City" />
                     <asp:BoundField DataField="State" HeaderText="State" SortExpression="State" />
-                    <asp:BoundField DataField="Zip_Code" HeaderText="Zip_Code" SortExpression="Zip_Code" />
+                    <asp:BoundField DataField="Zip_Code" HeaderText="Zip" SortExpression="Zip_Code" />
                     <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
                     <asp:BoundField DataField="Phone" HeaderText="Phone" SortExpression="Phone" />
                 </Columns>
@@ -175,13 +175,13 @@
             <br />
             <asp:DetailsView ID="DetailsView1" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="Father_ID" DataSourceID="SqlDataSource2" DefaultMode="Insert">
                 <Fields>
-                    <asp:BoundField DataField="Father_ID" HeaderText="Father_ID" ReadOnly="True" SortExpression="Father_ID" />
-                    <asp:BoundField DataField="F_Name" HeaderText="F_Name" SortExpression="F_Name" />
-                    <asp:BoundField DataField="L_NAme" HeaderText="L_NAme" SortExpression="L_NAme" />
+                    <asp:BoundField DataField="Father_ID" HeaderText="Father ID" ReadOnly="True" SortExpression="Father_ID" />
+                    <asp:BoundField DataField="F_Name" HeaderText="First Name" SortExpression="F_Name" />
+                    <asp:BoundField DataField="L_NAme" HeaderText="Last Name" SortExpression="L_NAme" />
                     <asp:BoundField DataField="Address" HeaderText="Address" SortExpression="Address" />
                     <asp:BoundField DataField="City" HeaderText="City" SortExpression="City" />
                     <asp:BoundField DataField="State" HeaderText="State" SortExpression="State" />
-                    <asp:BoundField DataField="Zip_Code" HeaderText="Zip_Code" SortExpression="Zip_Code" />
+                    <asp:BoundField DataField="Zip_Code" HeaderText="Zip" SortExpression="Zip_Code" />
                     <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
                     <asp:BoundField DataField="Phone" HeaderText="Phone" SortExpression="Phone" />
                     <asp:CommandField ButtonType="Button" InsertText="Add New" ShowInsertButton="True" />
@@ -216,24 +216,24 @@
             <br />
             <asp:GridView ID="GridView2" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Emergency_Contact_ID" DataSourceID="SqlDataSource3">
                 <Columns>
-                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True" />
-                    <asp:BoundField DataField="Emergency_Contact_ID" HeaderText="Emergency_Contact_ID" ReadOnly="True" SortExpression="Emergency_Contact_ID" />
-                    <asp:BoundField DataField="F_Name" HeaderText="F_Name" SortExpression="F_Name" />
-                    <asp:BoundField DataField="L_Name" HeaderText="L_Name" SortExpression="L_Name" />
-                    <asp:BoundField DataField="Phone_Home" HeaderText="Phone_Home" SortExpression="Phone_Home" />
-                    <asp:BoundField DataField="Phone_Work" HeaderText="Phone_Work" SortExpression="Phone_Work" />
-                    <asp:BoundField DataField="Phone_Cell" HeaderText="Phone_Cell" SortExpression="Phone_Cell" />
+                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+                    <asp:BoundField DataField="Emergency_Contact_ID" HeaderText="Contact ID" ReadOnly="True" SortExpression="Emergency_Contact_ID" />
+                    <asp:BoundField DataField="F_Name" HeaderText="First Name" SortExpression="F_Name" />
+                    <asp:BoundField DataField="L_Name" HeaderText="Last Name" SortExpression="L_Name" />
+                    <asp:BoundField DataField="Phone_Home" HeaderText="Phone Home" SortExpression="Phone_Home" />
+                    <asp:BoundField DataField="Phone_Work" HeaderText="Phone Work" SortExpression="Phone_Work" />
+                    <asp:BoundField DataField="Phone_Cell" HeaderText="Phone Cell" SortExpression="Phone_Cell" />
                 </Columns>
             </asp:GridView>
             <br />
             <asp:DetailsView ID="DetailsView2" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="Emergency_Contact_ID" DataSourceID="SqlDataSource3" DefaultMode="Insert">
                 <Fields>
-                    <asp:BoundField DataField="Emergency_Contact_ID" HeaderText="Emergency_Contact_ID" ReadOnly="True" SortExpression="Emergency_Contact_ID" />
-                    <asp:BoundField DataField="F_Name" HeaderText="F_Name" SortExpression="F_Name" />
-                    <asp:BoundField DataField="L_Name" HeaderText="L_Name" SortExpression="L_Name" />
-                    <asp:BoundField DataField="Phone_Home" HeaderText="Phone_Home" SortExpression="Phone_Home" />
-                    <asp:BoundField DataField="Phone_Work" HeaderText="Phone_Work" SortExpression="Phone_Work" />
-                    <asp:BoundField DataField="Phone_Cell" HeaderText="Phone_Cell" SortExpression="Phone_Cell" />
+                    <asp:BoundField DataField="Emergency_Contact_ID" HeaderText="Contact ID" ReadOnly="True" SortExpression="Emergency_Contact_ID" />
+                    <asp:BoundField DataField="F_Name" HeaderText="First Name" SortExpression="F_Name" />
+                    <asp:BoundField DataField="L_Name" HeaderText="Last Name" SortExpression="L_Name" />
+                    <asp:BoundField DataField="Phone_Home" HeaderText="Phone Home" SortExpression="Phone_Home" />
+                    <asp:BoundField DataField="Phone_Work" HeaderText="Phone Work" SortExpression="Phone_Work" />
+                    <asp:BoundField DataField="Phone_Cell" HeaderText="Phone Cell" SortExpression="Phone_Cell" />
                     <asp:CommandField ShowInsertButton="True" ButtonType="Button" InsertText="Add New" />
                 </Fields>
             </asp:DetailsView>
@@ -268,16 +268,17 @@
                 </UpdateParameters>
             </asp:SqlDataSource>
             <br />
-            <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" DataKeyNames="Physician_ID" DataSourceID="SqlDataSource4">
+            <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" DataKeyNames="Physician_ID" DataSourceID="SqlDataSource4" AllowPaging="True" AllowSorting="True">
                 <Columns>
-                    <asp:BoundField DataField="Physician_ID" HeaderText="Physician_ID" ReadOnly="True" SortExpression="Physician_ID" />
-                    <asp:BoundField DataField="Physician_FName" HeaderText="Physician_FName" SortExpression="Physician_FName" />
-                    <asp:BoundField DataField="Physician_LName" HeaderText="Physician_LName" SortExpression="Physician_LName" />
-                    <asp:BoundField DataField="Clinic_Name" HeaderText="Clinic_Name" SortExpression="Clinic_Name" />
+                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+                    <asp:BoundField DataField="Physician_ID" HeaderText="Physician ID" ReadOnly="True" SortExpression="Physician_ID" />
+                    <asp:BoundField DataField="Physician_FName" HeaderText="First Name" SortExpression="Physician_FName" />
+                    <asp:BoundField DataField="Physician_LName" HeaderText="Last Name" SortExpression="Physician_LName" />
+                    <asp:BoundField DataField="Clinic_Name" HeaderText="Clinic Name" SortExpression="Clinic_Name" />
                     <asp:BoundField DataField="Address" HeaderText="Address" SortExpression="Address" />
                     <asp:BoundField DataField="City" HeaderText="City" SortExpression="City" />
                     <asp:BoundField DataField="State" HeaderText="State" SortExpression="State" />
-                    <asp:BoundField DataField="Zip_Code" HeaderText="Zip_Code" SortExpression="Zip_Code" />
+                    <asp:BoundField DataField="Zip_Code" HeaderText="Zip" SortExpression="Zip_Code" />
                     <asp:BoundField DataField="Phone" HeaderText="Phone" SortExpression="Phone" />
                 </Columns>
             </asp:GridView>
@@ -312,14 +313,14 @@
             <br />
             <asp:DetailsView ID="DetailsView3" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="Physician_ID" DataSourceID="SqlDataSource8" DefaultMode="Insert">
                 <Fields>
-                    <asp:BoundField DataField="Physician_ID" HeaderText="Physician_ID" ReadOnly="True" SortExpression="Physician_ID" />
-                    <asp:BoundField DataField="Physician_FName" HeaderText="Physician_FName" SortExpression="Physician_FName" />
-                    <asp:BoundField DataField="Physician_LName" HeaderText="Physician_LName" SortExpression="Physician_LName" />
-                    <asp:BoundField DataField="Clinic_Name" HeaderText="Clinic_Name" SortExpression="Clinic_Name" />
+                    <asp:BoundField DataField="Physician_ID" HeaderText="Physician ID" ReadOnly="True" SortExpression="Physician_ID" />
+                    <asp:BoundField DataField="Physician_FName" HeaderText="First Name" SortExpression="Physician_FName" />
+                    <asp:BoundField DataField="Physician_LName" HeaderText="Last Name" SortExpression="Physician_LName" />
+                    <asp:BoundField DataField="Clinic_Name" HeaderText="Clinic Name" SortExpression="Clinic_Name" />
                     <asp:BoundField DataField="Address" HeaderText="Address" SortExpression="Address" />
                     <asp:BoundField DataField="City" HeaderText="City" SortExpression="City" />
                     <asp:BoundField DataField="State" HeaderText="State" SortExpression="State" />
-                    <asp:BoundField DataField="Zip_Code" HeaderText="Zip_Code" SortExpression="Zip_Code" />
+                    <asp:BoundField DataField="Zip_Code" HeaderText="Zip" SortExpression="Zip_Code" />
                     <asp:BoundField DataField="Phone" HeaderText="Phone" SortExpression="Phone" />
                     <asp:CommandField ButtonType="Button" InsertText="Add New" ShowInsertButton="True" />
                 </Fields>
@@ -355,15 +356,16 @@
                 </UpdateParameters>
             </asp:SqlDataSource>
             <br />
-            <asp:GridView ID="GridView4" runat="server" AutoGenerateColumns="False" DataKeyNames="Gaurdian_ID" DataSourceID="SqlDataSource5">
+            <asp:GridView ID="GridView4" runat="server" AutoGenerateColumns="False" DataKeyNames="Gaurdian_ID" DataSourceID="SqlDataSource5" AllowPaging="True" AllowSorting="True">
                 <Columns>
-                    <asp:BoundField DataField="Gaurdian_ID" HeaderText="Gaurdian_ID" ReadOnly="True" SortExpression="Gaurdian_ID" />
-                    <asp:BoundField DataField="F_Name" HeaderText="F_Name" SortExpression="F_Name" />
-                    <asp:BoundField DataField="L_Name" HeaderText="L_Name" SortExpression="L_Name" />
+                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+                    <asp:BoundField DataField="Gaurdian_ID" HeaderText="Gaurdian ID" ReadOnly="True" SortExpression="Gaurdian_ID" />
+                    <asp:BoundField DataField="F_Name" HeaderText="First Name" SortExpression="F_Name" />
+                    <asp:BoundField DataField="L_Name" HeaderText="Last Name" SortExpression="L_Name" />
                     <asp:BoundField DataField="Address" HeaderText="Address" SortExpression="Address" />
                     <asp:BoundField DataField="City" HeaderText="City" SortExpression="City" />
                     <asp:BoundField DataField="State" HeaderText="State" SortExpression="State" />
-                    <asp:BoundField DataField="Zip_Code" HeaderText="Zip_Code" SortExpression="Zip_Code" />
+                    <asp:BoundField DataField="Zip_Code" HeaderText="Zip" SortExpression="Zip_Code" />
                     <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
                     <asp:BoundField DataField="Phone" HeaderText="Phone" SortExpression="Phone" />
                 </Columns>
@@ -399,13 +401,13 @@
             <br />
             <asp:DetailsView ID="DetailsView4" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="Gaurdian_ID" DataSourceID="SqlDataSource9" DefaultMode="Insert">
                 <Fields>
-                    <asp:BoundField DataField="Gaurdian_ID" HeaderText="Gaurdian_ID" ReadOnly="True" SortExpression="Gaurdian_ID" />
-                    <asp:BoundField DataField="F_Name" HeaderText="F_Name" SortExpression="F_Name" />
-                    <asp:BoundField DataField="L_Name" HeaderText="L_Name" SortExpression="L_Name" />
+                    <asp:BoundField DataField="Gaurdian_ID" HeaderText="Gaurdian ID" ReadOnly="True" SortExpression="Gaurdian_ID" />
+                    <asp:BoundField DataField="F_Name" HeaderText="First Name" SortExpression="F_Name" />
+                    <asp:BoundField DataField="L_Name" HeaderText="Last Name" SortExpression="L_Name" />
                     <asp:BoundField DataField="Address" HeaderText="Address" SortExpression="Address" />
                     <asp:BoundField DataField="City" HeaderText="City" SortExpression="City" />
                     <asp:BoundField DataField="State" HeaderText="State" SortExpression="State" />
-                    <asp:BoundField DataField="Zip_Code" HeaderText="Zip_Code" SortExpression="Zip_Code" />
+                    <asp:BoundField DataField="Zip_Code" HeaderText="Zip" SortExpression="Zip_Code" />
                     <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
                     <asp:BoundField DataField="Phone" HeaderText="Phone" SortExpression="Phone" />
                     <asp:CommandField ButtonType="Button" InsertText="Add New" ShowInsertButton="True" />
@@ -428,10 +430,11 @@
                 </UpdateParameters>
             </asp:SqlDataSource>
             <br />
-            <asp:GridView ID="GridView5" runat="server" AutoGenerateColumns="False" DataKeyNames="Class_ID" DataSourceID="SqlDataSource6">
+            <asp:GridView ID="GridView5" runat="server" AutoGenerateColumns="False" DataKeyNames="Class_ID" DataSourceID="SqlDataSource6" AllowPaging="True" AllowSorting="True">
                 <Columns>
-                    <asp:BoundField DataField="Class_ID" HeaderText="Class_ID" ReadOnly="True" SortExpression="Class_ID" />
-                    <asp:BoundField DataField="Class_Name" HeaderText="Class_Name" SortExpression="Class_Name" />
+                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+                    <asp:BoundField DataField="Class_ID" HeaderText="Class ID" ReadOnly="True" SortExpression="Class_ID" />
+                    <asp:BoundField DataField="Class_Name" HeaderText="Class Name" SortExpression="Class_Name" />
                 </Columns>
             </asp:GridView>
             <br />
@@ -451,8 +454,8 @@
             <br />
             <asp:DetailsView ID="DetailsView5" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="Class_ID" DataSourceID="SqlDataSource10" DefaultMode="Insert">
                 <Fields>
-                    <asp:BoundField DataField="Class_ID" HeaderText="Class_ID" ReadOnly="True" SortExpression="Class_ID" />
-                    <asp:BoundField DataField="Class_Name" HeaderText="Class_Name" SortExpression="Class_Name" />
+                    <asp:BoundField DataField="Class_ID" HeaderText="Class ID" ReadOnly="True" SortExpression="Class_ID" />
+                    <asp:BoundField DataField="Class_Name" HeaderText="Class Name" SortExpression="Class_Name" />
                     <asp:CommandField ButtonType="Button" InsertText="Add New" ShowInsertButton="True" />
                 </Fields>
             </asp:DetailsView>
@@ -494,20 +497,21 @@
             </asp:SqlDataSource>
             <br />
             <br />
-            <asp:GridView ID="GridView6" runat="server" AutoGenerateColumns="False" DataKeyNames="Child_ID" DataSourceID="SqlDataSource7">
+            <asp:GridView ID="GridView6" runat="server" AutoGenerateColumns="False" DataKeyNames="Child_ID" DataSourceID="SqlDataSource7" AllowPaging="True" AllowSorting="True">
                 <Columns>
-                    <asp:BoundField DataField="Child_ID" HeaderText="Child_ID" ReadOnly="True" SortExpression="Child_ID" />
-                    <asp:BoundField DataField="F_Name" HeaderText="F_Name" SortExpression="F_Name" />
-                    <asp:BoundField DataField="L_Name" HeaderText="L_Name" SortExpression="L_Name" />
+                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+                    <asp:BoundField DataField="Child_ID" HeaderText="Child ID" ReadOnly="True" SortExpression="Child_ID" />
+                    <asp:BoundField DataField="F_Name" HeaderText="First Name" SortExpression="F_Name" />
+                    <asp:BoundField DataField="L_Name" HeaderText="Last Name" SortExpression="L_Name" />
                     <asp:BoundField DataField="DOB" HeaderText="DOB" SortExpression="DOB" />
                     <asp:BoundField DataField="Gender" HeaderText="Gender" SortExpression="Gender" />
-                    <asp:BoundField DataField="Physician_ID" HeaderText="Physician_ID" SortExpression="Physician_ID" />
-                    <asp:BoundField DataField="Class_ID" HeaderText="Class_ID" SortExpression="Class_ID" />
-                    <asp:BoundField DataField="Emergency_Contact_ID" HeaderText="Emergency_Contact_ID" SortExpression="Emergency_Contact_ID" />
-                    <asp:BoundField DataField="Mother_ID" HeaderText="Mother_ID" SortExpression="Mother_ID" />
-                    <asp:BoundField DataField="Father_ID" HeaderText="Father_ID" SortExpression="Father_ID" />
-                    <asp:BoundField DataField="Gaurdian_ID" HeaderText="Gaurdian_ID" SortExpression="Gaurdian_ID" />
-                    <asp:BoundField DataField="Address_Note" HeaderText="Address_Note" SortExpression="Address_Note" />
+                    <asp:BoundField DataField="Physician_ID" HeaderText="Physician ID" SortExpression="Physician_ID" />
+                    <asp:BoundField DataField="Class_ID" HeaderText="Class ID" SortExpression="Class_ID" />
+                    <asp:BoundField DataField="Emergency_Contact_ID" HeaderText="Emergency Contact ID" SortExpression="Emergency_Contact_ID" />
+                    <asp:BoundField DataField="Mother_ID" HeaderText="Mother ID" SortExpression="Mother_ID" />
+                    <asp:BoundField DataField="Father_ID" HeaderText="Father ID" SortExpression="Father_ID" />
+                    <asp:BoundField DataField="Gaurdian_ID" HeaderText="Gaurdian ID" SortExpression="Gaurdian_ID" />
+                    <asp:BoundField DataField="Address_Note" HeaderText="Address Note" SortExpression="Address_Note" />
                 </Columns>
             </asp:GridView>
             <br />
@@ -547,18 +551,18 @@
             <br />
             <asp:DetailsView ID="DetailsView6" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="Child_ID" DataSourceID="SqlDataSource11" DefaultMode="Insert">
                 <Fields>
-                    <asp:BoundField DataField="Child_ID" HeaderText="Child_ID" ReadOnly="True" SortExpression="Child_ID" />
-                    <asp:BoundField DataField="F_Name" HeaderText="F_Name" SortExpression="F_Name" />
-                    <asp:BoundField DataField="L_Name" HeaderText="L_Name" SortExpression="L_Name" />
+                    <asp:BoundField DataField="Child_ID" HeaderText="Child ID" ReadOnly="True" SortExpression="Child_ID" />
+                    <asp:BoundField DataField="F_Name" HeaderText="First Name" SortExpression="F_Name" />
+                    <asp:BoundField DataField="L_Name" HeaderText="Last Name" SortExpression="L_Name" />
                     <asp:BoundField DataField="DOB" HeaderText="DOB" SortExpression="DOB" />
                     <asp:BoundField DataField="Gender" HeaderText="Gender" SortExpression="Gender" />
-                    <asp:BoundField DataField="Physician_ID" HeaderText="Physician_ID" SortExpression="Physician_ID" />
-                    <asp:BoundField DataField="Class_ID" HeaderText="Class_ID" SortExpression="Class_ID" />
-                    <asp:BoundField DataField="Emergency_Contact_ID" HeaderText="Emergency_Contact_ID" SortExpression="Emergency_Contact_ID" />
-                    <asp:BoundField DataField="Mother_ID" HeaderText="Mother_ID" SortExpression="Mother_ID" />
-                    <asp:BoundField DataField="Father_ID" HeaderText="Father_ID" SortExpression="Father_ID" />
-                    <asp:BoundField DataField="Gaurdian_ID" HeaderText="Gaurdian_ID" SortExpression="Gaurdian_ID" />
-                    <asp:BoundField DataField="Address_Note" HeaderText="Address_Note" SortExpression="Address_Note" />
+                    <asp:BoundField DataField="Physician_ID" HeaderText="Physician ID" SortExpression="Physician_ID" />
+                    <asp:BoundField DataField="Class_ID" HeaderText="Class ID" SortExpression="Class_ID" />
+                    <asp:BoundField DataField="Emergency_Contact_ID" HeaderText="Emergency Contact ID" SortExpression="Emergency_Contact_ID" />
+                    <asp:BoundField DataField="Mother_ID" HeaderText="Mother ID" SortExpression="Mother_ID" />
+                    <asp:BoundField DataField="Father_ID" HeaderText="Father ID" SortExpression="Father_ID" />
+                    <asp:BoundField DataField="Gaurdian_ID" HeaderText="Gaurdian ID" SortExpression="Gaurdian_ID" />
+                    <asp:BoundField DataField="Address_Note" HeaderText="Address Note" SortExpression="Address_Note" />
                     <asp:CommandField ButtonType="Button" InsertText="Add New" ShowInsertButton="True" />
                 </Fields>
             </asp:DetailsView>
