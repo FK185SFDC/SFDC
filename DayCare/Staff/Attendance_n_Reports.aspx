@@ -41,8 +41,8 @@
 
     <asp:MultiView ID="Attendance_Reports_MultiView" runat="server">
 
-
     <asp:View ID="Child_Information_View" runat="server">
+        <h3 class="staff_title">Child Information:</h3>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:fk185_DaycareConnectionString %>" SelectCommand="SELECT * FROM [CHILD]"></asp:SqlDataSource>
         
         <asp:GridView ID="GridView1" CSSClass="staff_gv" runat="server" AutoGenerateColumns="False" DataKeyNames="Child_ID" DataSourceID="SqlDataSource1">
@@ -65,6 +65,7 @@
         </asp:View>
 
     <asp:View ID="Child_Attendance_View" runat="server">
+        <h3 class="staff_title">Child Attendance:</h3>
         <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
             ConnectionString="<%$ ConnectionStrings:fk185_DaycareConnectionString %>" 
             DeleteCommand="DELETE FROM [CHILD_ATTENDANCE] WHERE [Attendance_ID] = @Attendance_ID" 
@@ -204,6 +205,8 @@
         </asp:View>
 
     <asp:View ID="Meal_Report_View" runat="server">
+        <h3 class="staff_title">Meal Reports:</h3>
+   
         <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:fk185_DaycareConnectionString %>" DeleteCommand="DELETE FROM [MEAL_REPORT] WHERE [Meal_ID] = @Meal_ID" InsertCommand="INSERT INTO [MEAL_REPORT] ([Meal_ID], [Meal_Name], [Description], [Child_ID]) VALUES (@Meal_ID, @Meal_Name, @Description, @Child_ID)" SelectCommand="SELECT * FROM [MEAL_REPORT]" UpdateCommand="UPDATE [MEAL_REPORT] SET [Meal_Name] = @Meal_Name, [Description] = @Description, [Child_ID] = @Child_ID WHERE [Meal_ID] = @Meal_ID">
             <DeleteParameters>
                 <asp:Parameter Name="Meal_ID" Type="Int32" />
@@ -224,10 +227,24 @@
         
         <asp:GridView ID="GridView4" CSSClass="staff_gv"  runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Meal_ID" DataSourceID="SqlDataSource3">
             <Columns>
-                <asp:BoundField DataField="Meal_Name" HeaderText="Meal Name" SortExpression="Meal_Name" />
+                <asp:TemplateField HeaderText="Meal Name" SortExpression="Meal_Name">
+                    <EditItemTemplate>
+                        <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("Meal_Name") %>'></asp:TextBox>
+                    </EditItemTemplate>
+                    <ItemTemplate>
+                        <asp:Label ID="Label1" runat="server" Text='<%# Bind("Meal_Name") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
                 <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
-                <asp:BoundField DataField="Child_ID" HeaderText="Child ID" SortExpression="Child_ID" />
-                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" HeaderText="Update" />
+                <asp:TemplateField HeaderText="Child ID" SortExpression="Child_ID">
+                    <EditItemTemplate>
+                        <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("Child_ID") %>'></asp:TextBox>
+                    </EditItemTemplate>
+                    <ItemTemplate>
+                        <asp:Label ID="Label2" runat="server" Text='<%# Bind("Child_ID") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" HeaderText="Update" InsertText="Add New" />
             </Columns>
         </asp:GridView>
         <br />
@@ -251,15 +268,39 @@
         <asp:DetailsView ID="DetailsView3"  CSSClass="staff_dv" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="Meal_ID" DataSourceID="SqlDataSource7" DefaultMode="Insert">
             <Fields>
                 <asp:BoundField DataField="Meal_ID" HeaderText="Meal_ID" SortExpression="Meal_ID" InsertVisible="False" ReadOnly="True" />
-                <asp:BoundField DataField="Meal_Name" HeaderText="Meal Name" SortExpression="Meal_Name" />
+                <asp:TemplateField HeaderText="Meal Name" SortExpression="Meal_Name">
+                    <EditItemTemplate>
+                        <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("Meal_Name") %>'></asp:TextBox>
+                    </EditItemTemplate>
+                    <InsertItemTemplate>
+                        <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("Meal_Name") %>'></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" display="Dynamic" ControlToValidate="TextBox1" ErrorMessage="*" ValidationGroup="meal_dv"></asp:RequiredFieldValidator>
+                    </InsertItemTemplate>
+                    <ItemTemplate>
+                        <asp:Label ID="Label1" runat="server" Text='<%# Bind("Meal_Name") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
                 <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
-                <asp:BoundField DataField="Child_ID" HeaderText="Child ID" SortExpression="Child_ID" />
-                <asp:CommandField ButtonType="Button" ShowInsertButton="True" />
+                <asp:TemplateField HeaderText="Child ID" SortExpression="Child_ID">
+                    <EditItemTemplate>
+                        <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("Child_ID") %>'></asp:TextBox>
+                    </EditItemTemplate>
+                    <InsertItemTemplate>
+                        <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("Child_ID") %>'></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" ValidationGroup="meal_dv" runat="server" display="Dynamic" ControlToValidate="TextBox2" ErrorMessage="*"></asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator4" ValidationGroup="meal_dv" runat="server" display="Dynamic" ControlToValidate="TextBox2" ErrorMessage="Enter a valid ID number" ValidationExpression="^\d+$"></asp:RegularExpressionValidator>
+                    </InsertItemTemplate>
+                    <ItemTemplate>
+                        <asp:Label ID="Label2" runat="server" Text='<%# Bind("Child_ID") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:CommandField ButtonType="Button" ShowInsertButton="True" InsertText="Add New" ValidationGroup="meal_dv" />
             </Fields>
         </asp:DetailsView>
         </asp:View>
 
     <asp:View ID="Accident_Type_View" runat="server">
+        <h3 class="staff_title">Accident Type Reports:</h3>
         <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:fk185_DaycareConnectionString %>" DeleteCommand="DELETE FROM [ACCIDENT_TYPE] WHERE [Type_ID] = @Type_ID" InsertCommand="INSERT INTO [ACCIDENT_TYPE] ([Type_ID], [Short_Description], [Long_Description]) VALUES (@Type_ID, @Short_Description, @Long_Description)" SelectCommand="SELECT * FROM [ACCIDENT_TYPE]" UpdateCommand="UPDATE [ACCIDENT_TYPE] SET [Short_Description] = @Short_Description, [Long_Description] = @Long_Description WHERE [Type_ID] = @Type_ID">
             <DeleteParameters>
                 <asp:Parameter Name="Type_ID" Type="Int32" />
@@ -303,14 +344,26 @@
         <asp:DetailsView ID="DetailsView4" CSSClass="staff_dv" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="Type_ID" DataSourceID="SqlDataSource8" DefaultMode="Insert">
             <Fields>
                 <asp:BoundField DataField="Type_ID" HeaderText="Type_ID" ReadOnly="True" SortExpression="Type_ID" InsertVisible="False" />
-                <asp:BoundField DataField="Short_Description" HeaderText="Short Description" SortExpression="Short_Description" />
+                <asp:TemplateField HeaderText="Short Description" SortExpression="Short_Description">
+                    <EditItemTemplate>
+                        <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("Short_Description") %>'></asp:TextBox>
+                    </EditItemTemplate>
+                    <InsertItemTemplate>
+                        <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("Short_Description") %>'></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator6" Display="Dynamic" ValidationGroup="acc_type" runat="server" ControlToValidate="TextBox1" ErrorMessage="*"></asp:RequiredFieldValidator>
+                    </InsertItemTemplate>
+                    <ItemTemplate>
+                        <asp:Label ID="Label1" runat="server" Text='<%# Bind("Short_Description") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
                 <asp:BoundField DataField="Long_Description" HeaderText="Long Description" SortExpression="Long_Description" />
-                <asp:CommandField ButtonType="Button" ShowInsertButton="True" />
+                <asp:CommandField ButtonType="Button" ShowInsertButton="True"  ValidationGroup="acc_type" InsertText="Add New" />
             </Fields>
         </asp:DetailsView>
         </asp:View>
 
     <asp:View ID="Accident_Report_View" runat="server">
+        <h3 class="staff_title">Accident Reports:</h3>
         <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:fk185_DaycareConnectionString %>" DeleteCommand="DELETE FROM [ACCIDENT_REPORT] WHERE [Report_ID] = @Report_ID" InsertCommand="INSERT INTO [ACCIDENT_REPORT] ([Date], [Note], [Child_ID], [Type_ID]) VALUES (@Date, @Note, @Child_ID, @Type_ID)" SelectCommand="SELECT * FROM [ACCIDENT_REPORT]" UpdateCommand="UPDATE [ACCIDENT_REPORT] SET [Date] = @Date, [Note] = @Note, [Child_ID] = @Child_ID, [Type_ID] = @Type_ID WHERE [Report_ID] = @Report_ID">
             <DeleteParameters>
                 <asp:Parameter Name="Report_ID" Type="Int32" />
@@ -363,17 +416,53 @@
         <asp:DetailsView ID="DetailsView1"  CSSClass="staff_dv" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="Report_ID" DataSourceID="SqlDataSource9" DefaultMode="Insert">
             <Fields>
                 <asp:BoundField DataField="Report_ID" HeaderText="Report_ID" ReadOnly="True" SortExpression="Report_ID" InsertVisible="False" />
-                <asp:BoundField DataField="Date" HeaderText="Date" SortExpression="Date" />
+                <asp:TemplateField HeaderText="Date" SortExpression="Date">
+                    <EditItemTemplate>
+                        <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("Date") %>'></asp:TextBox>
+                    </EditItemTemplate>
+                    <InsertItemTemplate>
+                        <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("Date") %>'></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator7" ValidationGroup="acci_rprt" Display="Dynamic" runat="server" ControlToValidate="TextBox1" ErrorMessage="*"></asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator7" ValidationGroup="acci_rprt" Display="Dynamic" runat="server" ControlToValidate="TextBox1" ErrorMessage="Enter a valid date" ValidationExpression="^(((0?[1-9]|1[012])/(0?[1-9]|1\d|2[0-8])|(0?[13456789]|1[012])/(29|30)|(0?[13578]|1[02])/31)/(19|[2-9]\d)\d{2}|0?2/29/((19|[2-9]\d)(0[48]|[2468][048]|[13579][26])|(([2468][048]|[3579][26])00)))$"></asp:RegularExpressionValidator>
+                    </InsertItemTemplate>
+                    <ItemTemplate>
+                        <asp:Label ID="Label1" runat="server" Text='<%# Bind("Date") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
                 <asp:BoundField DataField="Note" HeaderText="Note" SortExpression="Note" />
-                <asp:BoundField DataField="Child_ID" HeaderText="Child ID" SortExpression="Child_ID" />
-                <asp:BoundField DataField="Type_ID" HeaderText="Type ID" SortExpression="Type_ID" />
-                <asp:CommandField ButtonType="Button" ShowInsertButton="True" HeaderText="Update" />
+                <asp:TemplateField HeaderText="Child ID" SortExpression="Child_ID">
+                    <EditItemTemplate>
+                        <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("Child_ID") %>'></asp:TextBox>
+                    </EditItemTemplate>
+                    <InsertItemTemplate>
+                        <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("Child_ID") %>'></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator8" ValidationGroup="acci_rprt" Display="Dynamic" runat="server" ControlToValidate="TextBox2" ErrorMessage="*"></asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator6" ValidationGroup="acci_rprt" Display="Dynamic" runat="server" ControlToValidate="TextBox2" ErrorMessage="Enter a valid ID number" ValidationExpression="^\d+$"></asp:RegularExpressionValidator>
+                    </InsertItemTemplate>
+                    <ItemTemplate>
+                        <asp:Label ID="Label2" runat="server" Text='<%# Bind("Child_ID") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="Type ID" SortExpression="Type_ID">
+                    <EditItemTemplate>
+                        <asp:TextBox ID="TextBox3" runat="server" Text='<%# Bind("Type_ID") %>'></asp:TextBox>
+                    </EditItemTemplate>
+                    <InsertItemTemplate>
+                        <asp:TextBox ID="TextBox3" runat="server" Text='<%# Bind("Type_ID") %>'></asp:TextBox>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator5" ValidationGroup="acci_rprt" Display="Dynamic" runat="server" ControlToValidate="TextBox3" ErrorMessage="Enter a valid ID number" ValidationExpression="^\d+$"></asp:RegularExpressionValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator9" ValidationGroup="acci_rprt" Display="Dynamic" runat="server" ControlToValidate="TextBox3" ErrorMessage="*"></asp:RequiredFieldValidator>
+                    </InsertItemTemplate>
+                    <ItemTemplate>
+                        <asp:Label ID="Label3" runat="server" Text='<%# Bind("Type_ID") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:CommandField ButtonType="Button" ValidationGroup="acci_rprt" ShowInsertButton="True" HeaderText="Update" InsertText="Add New" />
             </Fields>
         </asp:DetailsView>
         </asp:View>
 
     </asp:MultiView>
 
-
+    
 </asp:Content>
 
