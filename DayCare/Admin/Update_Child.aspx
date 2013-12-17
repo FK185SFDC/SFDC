@@ -462,7 +462,7 @@
         </asp:View>
 
         <asp:View ID="Child_View" runat="server">
-            <asp:SqlDataSource ID="SqlDataSource7" runat="server" ConnectionString="<%$ ConnectionStrings:fk185_DaycareConnectionString %>" DeleteCommand="DELETE FROM [CHILD] WHERE [Child_ID] = @Child_ID" InsertCommand="INSERT INTO [CHILD] ([Child_ID], [F_Name], [L_Name], [DOB], [Gender], [Physician_ID], [Class_ID], [Emergency_Contact_ID], [Mother_ID], [Father_ID], [Gaurdian_ID], [Address_Note]) VALUES (@Child_ID, @F_Name, @L_Name, @DOB, @Gender, @Physician_ID, @Class_ID, @Emergency_Contact_ID, @Mother_ID, @Father_ID, @Gaurdian_ID, @Address_Note)" SelectCommand="SELECT * FROM [CHILD]" UpdateCommand="UPDATE [CHILD] SET [F_Name] = @F_Name, [L_Name] = @L_Name, [DOB] = @DOB, [Gender] = @Gender, [Physician_ID] = @Physician_ID, [Class_ID] = @Class_ID, [Emergency_Contact_ID] = @Emergency_Contact_ID, [Mother_ID] = @Mother_ID, [Father_ID] = @Father_ID, [Gaurdian_ID] = @Gaurdian_ID, [Address_Note] = @Address_Note WHERE [Child_ID] = @Child_ID">
+            <asp:SqlDataSource ID="SqlDataSource7" runat="server" ConnectionString="<%$ ConnectionStrings:fk185_DaycareConnectionString %>" DeleteCommand="DELETE FROM [CHILD] WHERE [Child_ID] = @Child_ID" InsertCommand="INSERT INTO [CHILD] ([Child_ID], [F_Name], [L_Name], [DOB], [Gender], [Physician_ID], [Class_ID], [Emergency_Contact_ID], [Mother_ID], [Father_ID], [Gaurdian_ID], [Address_Note], [Start_Date], [End_Date]) VALUES (@Child_ID, @F_Name, @L_Name, @DOB, @Gender, @Physician_ID, @Class_ID, @Emergency_Contact_ID, @Mother_ID, @Father_ID, @Gaurdian_ID, @Address_Note, @Start_Date, @End_Date)" SelectCommand="SELECT * FROM [CHILD]" UpdateCommand="UPDATE [CHILD] SET [F_Name] = @F_Name, [L_Name] = @L_Name, [DOB] = @DOB, [Gender] = @Gender, [Physician_ID] = @Physician_ID, [Class_ID] = @Class_ID, [Emergency_Contact_ID] = @Emergency_Contact_ID, [Mother_ID] = @Mother_ID, [Father_ID] = @Father_ID, [Gaurdian_ID] = @Gaurdian_ID, [Address_Note] = @Address_Note, [Start_Date] = @Start_Date, [End_Date] = @End_Date WHERE [Child_ID] = @Child_ID">
                 <DeleteParameters>
                     <asp:Parameter Name="Child_ID" Type="Int32" />
                 </DeleteParameters>
@@ -479,6 +479,8 @@
                     <asp:Parameter Name="Father_ID" Type="Int32" />
                     <asp:Parameter Name="Gaurdian_ID" Type="Int32" />
                     <asp:Parameter Name="Address_Note" Type="String" />
+                    <asp:Parameter Name="Start_Date" Type="DateTime" />
+                    <asp:Parameter Name="End_Date" Type="DateTime" />
                 </InsertParameters>
                 <UpdateParameters>
                     <asp:Parameter Name="F_Name" Type="String" />
@@ -492,6 +494,8 @@
                     <asp:Parameter Name="Father_ID" Type="Int32" />
                     <asp:Parameter Name="Gaurdian_ID" Type="Int32" />
                     <asp:Parameter Name="Address_Note" Type="String" />
+                    <asp:Parameter Name="Start_Date" Type="DateTime" />
+                    <asp:Parameter Name="End_Date" Type="DateTime" />
                     <asp:Parameter Name="Child_ID" Type="Int32" />
                 </UpdateParameters>
             </asp:SqlDataSource>
@@ -499,7 +503,6 @@
             <br />
             <asp:GridView ID="GridView6" runat="server" AutoGenerateColumns="False" DataKeyNames="Child_ID" DataSourceID="SqlDataSource7" AllowPaging="True" AllowSorting="True">
                 <Columns>
-                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
                     <asp:BoundField DataField="Child_ID" HeaderText="Child ID" ReadOnly="True" SortExpression="Child_ID" />
                     <asp:BoundField DataField="F_Name" HeaderText="First Name" SortExpression="F_Name" />
                     <asp:BoundField DataField="L_Name" HeaderText="Last Name" SortExpression="L_Name" />
@@ -507,15 +510,18 @@
                     <asp:BoundField DataField="Gender" HeaderText="Gender" SortExpression="Gender" />
                     <asp:BoundField DataField="Physician_ID" HeaderText="Physician ID" SortExpression="Physician_ID" />
                     <asp:BoundField DataField="Class_ID" HeaderText="Class ID" SortExpression="Class_ID" />
-                    <asp:BoundField DataField="Emergency_Contact_ID" HeaderText="Emergency Contact ID" SortExpression="Emergency_Contact_ID" />
+                    <asp:BoundField DataField="Emergency_Contact_ID" HeaderText="Contact ID" SortExpression="Emergency_Contact_ID" />
                     <asp:BoundField DataField="Mother_ID" HeaderText="Mother ID" SortExpression="Mother_ID" />
                     <asp:BoundField DataField="Father_ID" HeaderText="Father ID" SortExpression="Father_ID" />
                     <asp:BoundField DataField="Gaurdian_ID" HeaderText="Gaurdian ID" SortExpression="Gaurdian_ID" />
                     <asp:BoundField DataField="Address_Note" HeaderText="Address Note" SortExpression="Address_Note" />
+                    <asp:BoundField DataField="Start_Date" HeaderText="Start Date" SortExpression="Start_Date" />
+                    <asp:BoundField DataField="End_Date" HeaderText="End Date" SortExpression="End_Date" />
+                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" HeaderText="Update" />
                 </Columns>
             </asp:GridView>
             <br />
-            <asp:SqlDataSource ID="SqlDataSource11" runat="server" ConnectionString="<%$ ConnectionStrings:fk185_DaycareConnectionString %>" DeleteCommand="DELETE FROM [CHILD] WHERE [Child_ID] = @Child_ID" InsertCommand="INSERT INTO [CHILD] ([Child_ID], [F_Name], [L_Name], [DOB], [Gender], [Physician_ID], [Class_ID], [Emergency_Contact_ID], [Mother_ID], [Father_ID], [Gaurdian_ID], [Address_Note]) VALUES (@Child_ID, @F_Name, @L_Name, @DOB, @Gender, @Physician_ID, @Class_ID, @Emergency_Contact_ID, @Mother_ID, @Father_ID, @Gaurdian_ID, @Address_Note)" SelectCommand="SELECT * FROM [CHILD]" UpdateCommand="UPDATE [CHILD] SET [F_Name] = @F_Name, [L_Name] = @L_Name, [DOB] = @DOB, [Gender] = @Gender, [Physician_ID] = @Physician_ID, [Class_ID] = @Class_ID, [Emergency_Contact_ID] = @Emergency_Contact_ID, [Mother_ID] = @Mother_ID, [Father_ID] = @Father_ID, [Gaurdian_ID] = @Gaurdian_ID, [Address_Note] = @Address_Note WHERE [Child_ID] = @Child_ID">
+            <asp:SqlDataSource ID="SqlDataSource11" runat="server" ConnectionString="<%$ ConnectionStrings:fk185_DaycareConnectionString %>" DeleteCommand="DELETE FROM [CHILD] WHERE [Child_ID] = @Child_ID" InsertCommand="INSERT INTO [CHILD] ([Child_ID], [F_Name], [L_Name], [DOB], [Gender], [Physician_ID], [Class_ID], [Emergency_Contact_ID], [Mother_ID], [Father_ID], [Gaurdian_ID], [Address_Note], [Start_Date], [End_Date]) VALUES (@Child_ID, @F_Name, @L_Name, @DOB, @Gender, @Physician_ID, @Class_ID, @Emergency_Contact_ID, @Mother_ID, @Father_ID, @Gaurdian_ID, @Address_Note, @Start_Date, @End_Date)" SelectCommand="SELECT * FROM [CHILD]" UpdateCommand="UPDATE [CHILD] SET [F_Name] = @F_Name, [L_Name] = @L_Name, [DOB] = @DOB, [Gender] = @Gender, [Physician_ID] = @Physician_ID, [Class_ID] = @Class_ID, [Emergency_Contact_ID] = @Emergency_Contact_ID, [Mother_ID] = @Mother_ID, [Father_ID] = @Father_ID, [Gaurdian_ID] = @Gaurdian_ID, [Address_Note] = @Address_Note, [Start_Date] = @Start_Date, [End_Date] = @End_Date WHERE [Child_ID] = @Child_ID">
                 <DeleteParameters>
                     <asp:Parameter Name="Child_ID" Type="Int32" />
                 </DeleteParameters>
@@ -532,6 +538,8 @@
                     <asp:Parameter Name="Father_ID" Type="Int32" />
                     <asp:Parameter Name="Gaurdian_ID" Type="Int32" />
                     <asp:Parameter Name="Address_Note" Type="String" />
+                    <asp:Parameter Name="Start_Date" Type="DateTime" />
+                    <asp:Parameter Name="End_Date" Type="DateTime" />
                 </InsertParameters>
                 <UpdateParameters>
                     <asp:Parameter Name="F_Name" Type="String" />
@@ -545,6 +553,8 @@
                     <asp:Parameter Name="Father_ID" Type="Int32" />
                     <asp:Parameter Name="Gaurdian_ID" Type="Int32" />
                     <asp:Parameter Name="Address_Note" Type="String" />
+                    <asp:Parameter Name="Start_Date" Type="DateTime" />
+                    <asp:Parameter Name="End_Date" Type="DateTime" />
                     <asp:Parameter Name="Child_ID" Type="Int32" />
                 </UpdateParameters>
             </asp:SqlDataSource>
@@ -558,11 +568,13 @@
                     <asp:BoundField DataField="Gender" HeaderText="Gender" SortExpression="Gender" />
                     <asp:BoundField DataField="Physician_ID" HeaderText="Physician ID" SortExpression="Physician_ID" />
                     <asp:BoundField DataField="Class_ID" HeaderText="Class ID" SortExpression="Class_ID" />
-                    <asp:BoundField DataField="Emergency_Contact_ID" HeaderText="Emergency Contact ID" SortExpression="Emergency_Contact_ID" />
+                    <asp:BoundField DataField="Emergency_Contact_ID" HeaderText="Contact ID" SortExpression="Emergency_Contact_ID" />
                     <asp:BoundField DataField="Mother_ID" HeaderText="Mother ID" SortExpression="Mother_ID" />
                     <asp:BoundField DataField="Father_ID" HeaderText="Father ID" SortExpression="Father_ID" />
                     <asp:BoundField DataField="Gaurdian_ID" HeaderText="Gaurdian ID" SortExpression="Gaurdian_ID" />
                     <asp:BoundField DataField="Address_Note" HeaderText="Address Note" SortExpression="Address_Note" />
+                    <asp:BoundField DataField="Start_Date" HeaderText="Start Date" SortExpression="Start_Date" />
+                    <asp:BoundField DataField="End_Date" HeaderText="End Date" SortExpression="End_Date" />
                     <asp:CommandField ButtonType="Button" InsertText="Add New" ShowInsertButton="True" />
                 </Fields>
             </asp:DetailsView>

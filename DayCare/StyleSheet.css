@@ -161,3 +161,45 @@
     
 }
 
+
+
+
+/*------------------------------------------------Staff Page-----------------------------------------------*/
+
+/*---------- Staff GridViews --------*/
+.staff_gv {
+
+    margin-left:15px;
+    margin-top:45px;
+    text-align:center;
+
+}
+
+
+/*---------- Staff DetailsViews --------*/
+.staff_dv {
+
+    margin-left:15px;
+    background-color:black;
+
+}
+
+
+/*---------- Staff View Buttons --------*/
+.vch:hover {
+
+    background-color:black;
+
+}
+
+.staff_btn {
+
+    
+}
+
+.staff_btn:focus {
+
+    background-color:#8B97AB;
+    
+
+}
