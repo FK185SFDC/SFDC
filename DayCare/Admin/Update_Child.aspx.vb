@@ -38,14 +38,14 @@ Partial Class Admin_Update_Child
         'Test for an error during processing
         If e.Exception IsNot Nothing Then
             'Test for an exception during row update
-            lblError.Text = "* ERROR: You must fill in all fields! "
+            lblError.Text = "* ERROR: You must fill in all fields correctly! "
             'This suppresses the exception and keeps the
             'row in EditMode
             e.ExceptionHandled = True
             e.KeepInEditMode = True
         Else
 
-            lblError.Text = "Update succeeded. All database entries have been recorded. Thank you."
+            lblError.Text = "Update succeeded. All database entries have been recorded."
 
         End If
     End Sub
