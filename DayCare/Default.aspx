@@ -4,6 +4,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    
     <div id="Hm_pge">
     <h1 style="text-align:center">Welcome to State Farm Daycare!</h1>
         <p>At the State Farm Daycare we provide your child with a safe and stimulating environment where your child 
@@ -20,9 +21,9 @@
         <h3>Phone Number:</h3> 319.340.1234<br />
         <h3>Hours of Operation:</h3> Monday - Friday: 6:30 AM to 6:30 PM<br />
 
-         
+         <br /><br />
                
-            
+        
 
 
        

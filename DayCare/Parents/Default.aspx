@@ -3,6 +3,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="right" Runat="Server">
 
+    <asp:label id="Message" runat="server"/><br /><br />
 
     This is Parents Default page appears in this ContentPlaceHolder .<br /><br />
     
